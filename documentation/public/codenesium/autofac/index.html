@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Autofac :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+
+<script>
+var i=new Image();i.src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=";
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none"
+		 src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=" />
+</noscript>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-851792048"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-851792048');
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71359140-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<style>
+.nav-select
+{
+	margin-top:15px;
+}
+header:after
+{
+background:none;
+}
+header
+{
+  background-color: #2C3E50;
+}
+
+</style>
+
+<link rel="shortcut icon" href="https://www.codenesium.com/img/favicon.png" type="image/x-icon" />
+
+
+
+    
+  </head>
+  <body data-url="/documentation/codenesium/autofac/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://www.codenesium.com/img/favicon.png" alt="alt text" /> <a href="https://www.codenesium.com">Codenesium</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Documentation</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/authentication/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/authentication/">
+            Authentication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/autofac/" class="dd-item active">
+        <div>
+          <a href="/documentation/codenesium/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/azure/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/azure/">
+            Azure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/docker/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/docker/">
+            Docker
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/entityframework/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/healthchecks/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/healthchecks/">
+            Health Checks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground Server</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/project-structure/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/project-structure/">Project Structure</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/windowsservice/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/windowsservice/">
+            Running as Windows Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/services/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/services/">
+            Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/tooling/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/tooling/">
+            Tooling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/validation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/validation/">
+            Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/articles/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/articles/">Articles</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/articles/entity-framework-example/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/entity-framework-example/">ASP.NET Core API with Entity Framework</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/articles/chaos-to-solid/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/chaos-to-solid/">Chaos to SOLID</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/account/">Subscription</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Documentation</option> 
+      <option value="/documentation/codenesium/appsettings/" >- AppSettings</option>
+      <option value="/documentation/codenesium/authentication/" >- Authentication</option>
+      <option value="/documentation/codenesium/autofac/"  selected>- Autofac</option>
+      <option value="/documentation/codenesium/azure/" >- Azure</option>
+      <option value="/documentation/codenesium/controllers/" >- Controllers</option>
+      <option value="/documentation/codenesium/databasemigrations/" >- Database Migrations</option>
+      <option value="/documentation/codenesium/deployment/" >- Deployment</option>
+      <option value="/documentation/codenesium/docker/" >- Docker</option>
+      <option value="/documentation/codenesium/entityframework/" >- Entity Framework</option>
+      <option value="/documentation/codenesium/filters/" >- Filters</option>
+      <option value="/documentation/codenesium/healthchecks/" >- Health Checks</option>
+      <option value="/documentation/codenesium/logging/" >- Logging</option>
+      <option value="/documentation/codenesium/performance/" >- Performance</option>
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground Server</option>
+    <option value="/documentation/codenesium/project-structure/" >
+  - 
+   Project Structure</option> 
+  
+      <option value="/documentation/codenesium/repositories/" >- Repositories</option>
+      <option value="/documentation/codenesium/windowsservice/" >- Running as Windows Service</option>
+      <option value="/documentation/codenesium/services/" >- Services</option>
+      <option value="/documentation/codenesium/swagger/" >- Swagger</option>
+      <option value="/documentation/codenesium/testing/" >- Testing</option>
+      <option value="/documentation/codenesium/tooling/" >- Tooling</option>
+      <option value="/documentation/codenesium/validation/" >- Validation</option>
+  
+    <option value="/documentation/articles/" >
+   Articles</option>
+    <option value="/documentation/account/" >
+   Subscription</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Autofac</h1>
+    
+    
+    
+    <p>We use Autofac for our Inversion of Control container. ASP.NET Core does have a build in IOC container but we found it had some limitaitons.
+Mainly it doesn&rsquo;t support registration by convention which means you have to make an explicit registration for everything you add which is a pain.
+Autofac is only used in the Startup.cs file. Look there for documenation on how we use Autofac.</p>
+
+<p><a href="https://autofac.readthedocs.io/en/latest/">Autofac Documentation</a></p>
+
+<p><a href="https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-2.1">Dependency injection in .NET Core</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/codenesium/authentication/" title="Authentication"> <i class="fa fa-chevron-left"></i><label>Authentication</label></a>
+    <a class="nav nav-next" href="/documentation/codenesium/azure/" title="Azure" style="margin-right: 0px;"><label>Azure</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="codenesium/autofac.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

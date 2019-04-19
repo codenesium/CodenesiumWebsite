@@ -1,0 +1,2570 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Chaos to SOLID :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+
+<script>
+var i=new Image();i.src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=";
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none"
+		 src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=" />
+</noscript>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-851792048"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-851792048');
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71359140-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<style>
+.nav-select
+{
+	margin-top:15px;
+}
+header:after
+{
+background:none;
+}
+header
+{
+  background-color: #2C3E50;
+}
+
+</style>
+
+<link rel="shortcut icon" href="https://www.codenesium.com/img/favicon.png" type="image/x-icon" />
+
+
+
+    
+  </head>
+  <body data-url="/documentation/articles/chaos-to-solid/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://www.codenesium.com/img/favicon.png" alt="alt text" /> <a href="https://www.codenesium.com">Codenesium</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Documentation</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/authentication/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/authentication/">
+            Authentication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/autofac/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/azure/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/azure/">
+            Azure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/docker/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/docker/">
+            Docker
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/entityframework/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/healthchecks/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/healthchecks/">
+            Health Checks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground Server</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/project-structure/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/project-structure/">Project Structure</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/windowsservice/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/windowsservice/">
+            Running as Windows Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/services/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/services/">
+            Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/tooling/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/tooling/">
+            Tooling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/validation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/validation/">
+            Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/articles/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/documentation/articles/">Articles</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/articles/entity-framework-example/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/entity-framework-example/">ASP.NET Core API with Entity Framework</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/articles/chaos-to-solid/" class="dd-item parent active
+        ">
+      <div>
+      <a href="/documentation/articles/chaos-to-solid/">Chaos to SOLID</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/account/">Subscription</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Documentation</option> 
+      <option value="/documentation/codenesium/appsettings/" >- AppSettings</option>
+      <option value="/documentation/codenesium/authentication/" >- Authentication</option>
+      <option value="/documentation/codenesium/autofac/" >- Autofac</option>
+      <option value="/documentation/codenesium/azure/" >- Azure</option>
+      <option value="/documentation/codenesium/controllers/" >- Controllers</option>
+      <option value="/documentation/codenesium/databasemigrations/" >- Database Migrations</option>
+      <option value="/documentation/codenesium/deployment/" >- Deployment</option>
+      <option value="/documentation/codenesium/docker/" >- Docker</option>
+      <option value="/documentation/codenesium/entityframework/" >- Entity Framework</option>
+      <option value="/documentation/codenesium/filters/" >- Filters</option>
+      <option value="/documentation/codenesium/healthchecks/" >- Health Checks</option>
+      <option value="/documentation/codenesium/logging/" >- Logging</option>
+      <option value="/documentation/codenesium/performance/" >- Performance</option>
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground Server</option>
+    <option value="/documentation/codenesium/project-structure/" >
+  - 
+   Project Structure</option> 
+  
+      <option value="/documentation/codenesium/repositories/" >- Repositories</option>
+      <option value="/documentation/codenesium/windowsservice/" >- Running as Windows Service</option>
+      <option value="/documentation/codenesium/services/" >- Services</option>
+      <option value="/documentation/codenesium/swagger/" >- Swagger</option>
+      <option value="/documentation/codenesium/testing/" >- Testing</option>
+      <option value="/documentation/codenesium/tooling/" >- Tooling</option>
+      <option value="/documentation/codenesium/validation/" >- Validation</option>
+  
+    <option value="/documentation/articles/" >
+   Articles</option> 
+    <option value="/documentation/articles/entity-framework-example/" >
+  - 
+   ASP.NET Core API with Entity Framework</option>
+    <option value="/documentation/articles/chaos-to-solid/"  selected>
+  - 
+   Chaos to SOLID</option> 
+  
+  
+    <option value="/documentation/account/" >
+   Subscription</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Chaos to SOLID</h1>
+    
+    
+    
+
+
+
+<p>This article is a journey on the path from chaos to SOLID.</p>
+
+<p>Code can be found on Github at <a href="https://github.com/codenesium/ASP.NET-Core-Examples/tree/master/ChaosToSOLID">https://github.com/codenesium/ASP.NET-Core-Examples/tree/master/ChaosToSOLID</a></p>
+
+<h3 id="what-is-chaos">What is chaos?</h3>
+
+<ul>
+<li>Chaos is a project that everyone is scared to touch and requires a week to add a field.<br /></li>
+<li>It&rsquo;s no tests or even worse bad tests that frustrate developers, slow the development process and don&rsquo;t help quality.</li>
+<li>It&rsquo;s late nights fixing bugs that should have been caught with tests.</li>
+<li>It&rsquo;s fixing the same bug over and over because it keeps getting reintroduced.</li>
+<li>It&rsquo;s a unit test suite that takes hours to run and is constantly broken by changes in other parts of the system.</li>
+<li>It&rsquo;s the wall on a new project that you hit when the quality issues start dragging you down.</li>
+</ul>
+
+<p>We&rsquo;re going to take a set of requirements and implement the project multiple times as we move from a naive attempt to a complete solution. Along the way we will
+explore how to unit test and various tools that make testing easier. Our stack is ASP.NET Core.</p>
+
+<h3 id="what-is-solid">What is SOLID?</h3>
+
+<p>This is straight from <a href="https://en.wikipedia.org/wiki/SOLID">Wikipedia</a></p>
+
+<h5 id="single-responsibility-principle">Single responsibility principle</h5>
+
+<p>a class should have only a single responsibility (i.e. changes to only one part of the software&rsquo;s specification should be able to affect the specification of the class).</p>
+
+<h5 id="open-closed-principle">Open/closed principle</h5>
+
+<p>&ldquo;software entities … should be open for extension, but closed for modification.&rdquo;</p>
+
+<h5 id="liskov-substitution-principle">Liskov substitution principle</h5>
+
+<p>&ldquo;objects in a program should be replaceable with instances of their subtypes without altering the correctness of that program.&rdquo; See also design by contract.</p>
+
+<h5 id="interface-segregation-principle">Interface segregation principle</h5>
+
+<p>&ldquo;many client-specific interfaces are better than one general-purpose interface.&rdquo;[4]</p>
+
+<h5 id="dependency-inversion-principle">Dependency inversion principle</h5>
+
+<p>one should &ldquo;depend upon abstractions, [not] concretions.&rdquo;</p>
+
+<p>But what do these things mean in practice?</p>
+
+<p>What happens when you don&rsquo;t write SOLID code?</p>
+
+<p>&ldquo;a class should have only a single responsibility&rdquo; sounds simple but what is a responsibility?</p>
+
+<p>Responsibility could mean interface with the database. Does that mean you&rsquo;re SOLID if you have a repository class with 500 methods?
+By applying SOLID principles to your software you can accommodate change and be confident that the software you write today will work in the future.</p>
+
+<h4 id="the-task">The task</h4>
+
+<p>You are a software engineer at a bank and you have been tasked with building a service that runs on the backend.</p>
+
+<p>The web service that runs the bank website will call your web service with details to create the account in the database. There are
+two methods you need to implement. They need a method to create an account and a method to retrieve it by id. As you can already guess
+these are just methods you would see on a REST API. We&rsquo;re going to focus on these two methods for the duration of the project.</p>
+
+<h4 id="iteration-1">Iteration 1</h4>
+
+<pre><code>[Route(&quot;api/[controller]&quot;)]
+[ApiController]
+public class AccountControllerV1 : ControllerBase
+{
+    /// &lt;summary&gt;
+    /// This system runs as a service in a bank. The website backend that our customers use enter
+    /// their account information and then that service calls our service to actually create the accounts for the customers.
+    /// Create a method that takes an account name and customer id and creates an account for them.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;account&quot;&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    [HttpPost]
+    public IActionResult Create(Account account)
+    {
+        if(string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        using (var context = new ApplicationDbContext())
+        {
+            if (context.Accounts.Any(a =&gt; a.Name == account.Name))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+            }
+            account.DateCreated = DateTime.Now;
+            context.Accounts.Add(account);
+            context.SaveChanges();
+            return Ok(account);
+        }
+    }
+}
+</code></pre>
+
+<p>And the unit tests too because someone read on a blog that unit tests are good.</p>
+
+<pre><code>[Fact]
+public void Test_Account_Create()
+{
+    AccountControllerV1 controller = new AccountControllerV1();
+
+    IActionResult result = controller.Create(new Account() { Id = 1, Name = &quot;Test&quot;, SSN=&quot;078-05-1120&quot; });
+    Assert.True(result is OkObjectResult);
+    var response = (result as OkObjectResult);
+    var responseItem = response.Value as Account;
+    Assert.True(responseItem.Id == 1);
+    Assert.True(responseItem.Name == &quot;Test&quot;);
+    Assert.True(responseItem.SSN == &quot;078-05-1120&quot;);
+    Assert.True(responseItem.DateCreated != null);
+}
+
+</code></pre>
+
+<p>Technically this satisfies our requirements. We have 100% test coverage. We&rsquo;re even validating the input because we&rsquo;re good developers.</p>
+
+<p>I want to express to you that this will lead to chaos&hellip;let me explain why.</p>
+
+<p>This code is not testable. It will never be testable written like this and it will devolve into a mess over time as requirements change.</p>
+
+<p>This sounds like a contradiction because we clearly have a test.</p>
+
+<ol>
+<li><p>Our method is validating and interacting with the database. It&rsquo;s easy to understand now. Imagine that this table grows to require 20 fields. That&rsquo;s not a unrealistic number. Now imagine how much validation is going to be required on those 20 fields. At least 20 field type checks and then any database validation required for your business rules. How many lines can be put in this method? 100? 500? At that point how easy would it be to go make a change in the method and be very confident you didn&rsquo;t break anything?</p></li>
+
+<li><p>We&rsquo;re not testing the individual things inside the create method. We&rsquo;re testing all of it. Because we don&rsquo;t really have a choice. A failure in validation or in the database is all the same to this test. What&rsquo;s the difference between an empty name error and a record already exists error? How would we even set those tests up? We would have to create a model for each test while having to think about the various rules that have to pass to test the one thing we want to test. We can mock the Entity Framework context because .NET core is awesome but that&rsquo;s not a unit test. Do we really want to deal with EntityFramework every time we need to test this method?</p></li>
+
+<li><p>This test is testing that all of the fields are correct. That means when we change or add a field we&rsquo;re going to have to update every one of these tests. There could be lots and lots of tests. Good luck with that. This is a violation of <a href="https://en.wikipedia.org/wiki/Don%27t_repeat_yourself">DRY</a></p></li>
+
+<li><p>We&rsquo;re creating our Account model with inline object initialization. This leads to bugs because when we add a field to this class we won&rsquo;t get a compile time error that we&rsquo;re not setting the new fields. This is a violation of the open/closed principle.</p></li>
+
+<li><p>We&rsquo;re relying on DateTime.Now to set the dateCreated field. How can we test that?</p></li>
+</ol>
+
+<h4 id="iteration-2">Iteration 2</h4>
+
+<p>In this iteration we&rsquo;re going to change our controller to use dependency injection. This is application of the D in SOLID. Classes should have their dependencies injected so that the functionality of the class can be verified with mocks.</p>
+
+<pre><code>/// &lt;summary&gt;
+/// We've changed our account controller to use an injected database context.
+/// &lt;/summary&gt;
+[Route(&quot;api/[controller]&quot;)]
+[ApiController]
+public class AccountControllerV2 : ControllerBase
+{
+    private ApplicationDbContext context;
+    public AccountControllerV2(ApplicationDbContext context)
+    {
+        this.context = context;
+    }
+    [HttpPost]
+    public IActionResult Create(Account account)
+    {
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (context.Accounts.Any(a =&gt; a.Name == account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        account.DateCreated = DateTime.Now;
+        this.context.Accounts.Add(account);
+        this.context.SaveChanges();
+        return Ok(account);
+    }
+}
+</code></pre>
+
+<pre><code>[Fact]
+public void Test_Account_Create()
+{
+
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    AccountControllerV2 controller = new AccountControllerV2(context);
+    IActionResult result = controller.Create(new Account() { Id = 1, Name = &quot;Checking&quot;, SSN = &quot;078-05-1120&quot; });
+    Assert.True(result != null);
+    Assert.True(context.Accounts.Count() == 1);
+    Assert.True(context.Accounts.First().Id == 1);
+    Assert.True(context.Accounts.First().Name == &quot;Checking&quot;);
+    Assert.True(context.Accounts.First().DateCreated != null);
+    Assert.True(context.Accounts.First().SSN == &quot;078-05-1120&quot;);
+}
+
+[Fact]
+public void Test_Account_Create_With_Validation()
+{
+    //setup
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test2&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    AccountControllerV2 controller = new AccountControllerV2(context);
+
+    //act
+    IActionResult result = controller.Create(new Account() { Id = 1, Name = &quot;Checking&quot;, SSN=&quot;078-05-1120&quot; });
+    Assert.True(result != null); // the result isn't null
+    Assert.True(context.Accounts.Count() == 1); // the result has the count we expect
+    Assert.True(context.Accounts.First().Id == 1); // the record has the id we expect
+    Assert.True(context.Accounts.First().Name == &quot;Checking&quot;); // it has the right name
+    Assert.True(context.Accounts.First().DateCreated != null); // we saved a date
+    Assert.True(context.Accounts.First().SSN == &quot;078-05-1120&quot;);
+    
+    // test that creating a blank name returns a 422 code
+    IActionResult result2 = controller.Create(new Account() { Id = 1, Name = &quot;&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+    // test that creating duplicate names returns 4222
+    IActionResult resultUnique = controller.Create(new Account() { Id = 2, Name = &quot;Checking1&quot; });
+    IActionResult resultUniqueTest = controller.Create(new Account() { Id = 2, Name = &quot;Checking1&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+}
+</code></pre>
+
+<p>In Iteration 2 we changed our controller to take the Entity Framework context as a constructor argument. This is the D in SOLID. Dependency inversion
+means classes that depend on other classes to operate have those classes injected instead of creating them. There are inversion of control systems that handle
+creating whatever instance a class required. This project uses Autofac but there are several IOC libraries available. By injecting the Entity Framework context
+we can verify things happened to the context like records were created.</p>
+
+<p>In Test_Account_Create we are now testing that a record actually got added to the context after calling create on the controller.</p>
+
+<p>In Test_Account_Create_With_Validation we test that creating an account with a blank name returns a 422(Unprocessable Entity) code and then we test that creating an account with the same name as
+an existing return a 422 error.</p>
+
+<p>We have 100% test coverage. What are some issues with this code?</p>
+
+<p>Our tests are growing! How big will they go? They&rsquo;re complicated too.</p>
+
+<ol>
+<li><p>Test_Account_Create_With_Validation is testing lots of stuff. A failure anywhere in
+this test will require some digging to understand what the problem really is.</p></li>
+
+<li><p>We&rsquo;re still using Entity Framework which is slow in a test context. Unit tests should be crazy fast so you get instant feedback when you&rsquo;re working in the code.</p></li>
+
+<li><p>We&rsquo;re still checking every field which is brittle as we discussed.</p></li>
+
+<li><p>When we add 20 more fields to this table how long will this test be? 1k lines?</p></li>
+
+<li><p>We&rsquo;re still relying on DateTime.Now.</p></li>
+</ol>
+
+<h4 id="iteration-3">Iteration 3</h4>
+
+<h6 id="requirement-change">Requirement change</h6>
+
+<p>A new requirement came in and we have to change this controller to call an external service to validate this customer&rsquo;s SSN with the FBI counter-terrorism database. We can&rsquo;t
+let people on the terror list open bank accounts so we are going to call the FBI service with the user&rsquo;s social security number to determine if we should let them open an account.</p>
+
+<pre><code>using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Net.Http;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+namespace Chaos.Controllers
+{
+    /// &lt;summary&gt;
+    /// A new requirement came in and we have to change this controller to use an external service to validate this customer with the FBI counter-terrorism database.
+    /// &lt;/summary&gt;
+    [Route(&quot;api/[controller]&quot;)]
+    [ApiController]
+    public class AccountControllerV3 : ControllerBase
+    {
+        private ApplicationDbContext context;
+        public AccountControllerV3(ApplicationDbContext context)
+        {
+            this.context = context;
+        }
+        [HttpPost]
+        public async Task&lt;IActionResult&gt; Create(Account account)
+        {
+            if (string.IsNullOrWhiteSpace(account.Name))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+            }
+
+            if (context.Accounts.Any(a =&gt; a.Name == account.Name))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+            }
+
+            if (string.IsNullOrWhiteSpace(account.SSN))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+            }
+
+            if(!(await this.VerifyWithFBI(account.SSN)))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+            }
+
+            context.Accounts.Add(account);
+            context.SaveChanges();
+            return Ok(account);
+        }
+
+        
+        private async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+        {
+            HttpClient client = new HttpClient();
+            string response = await client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+            if(!string.IsNullOrWhiteSpace(response))
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+    }
+}
+</code></pre>
+
+<pre><code> [Fact]
+public async void Test_Account_Create_With_Validation_Cant_Test_FBI_Service()
+{
+    //setup
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test2&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    AccountControllerV3 controller = new AccountControllerV3(context);
+
+    //act
+    IActionResult result = await controller.Create(new Account() { Id = 1, Name = &quot;Checking&quot;, SSN= &quot;000-05-1120&quot; });
+    Assert.True(result != null); // the result isn't null
+    Assert.True(context.Accounts.Count() == 1); // the result has the count we expect
+    Assert.True(context.Accounts.First().Id == 1); // the record has the id we expect
+    Assert.True(context.Accounts.First().Name == &quot;Checking&quot;); // it has the right name
+    Assert.True(context.Accounts.First().DateCreated != null); // we saved a date
+    Assert.True(context.Accounts.First().SSN == &quot;000-05-1120&quot;);
+    // test that creating a blank name returns a 422 code
+    IActionResult result2 = await controller.Create(new Account() { Id = 1, Name = &quot;&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+    // test that creating duplicate names returns 4222
+    IActionResult resultUnique = await controller.Create(new Account() { Id = 2, Name = &quot;Checking1&quot; });
+    IActionResult resultUniqueTest = await controller.Create(new Account() { Id = 2, Name = &quot;Checking1&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+
+    //How can we test that our FBI service worked or failed? We really can't.
+}
+</code></pre>
+
+<p>We&rsquo;ve added the FBI service method. Ignoring the fact this is just a test json endpoint what&rsquo;s wrong with this method?</p>
+
+<ol>
+<li>Our endpoint is hard-coded.</li>
+<li>Is there any way to mock this method in tests for our controller? Probably not because it doesn&rsquo;t use an interface and the method isn&rsquo;t virtual.</li>
+<li>This is just an FYI but HttpClient should be used as a singleton in .NET core. It will use up all of the sockets on a machine used like this. You should
+not use using statements with it either.</li>
+</ol>
+
+<h4 id="iteration-4">Iteration 4</h4>
+
+<p>In this iteration we&rsquo;re going to make our FBI service testable in our controller so that if it returns false we can test our controller returns the right status code.</p>
+
+<pre><code>[Route(&quot;api/[controller]&quot;)]
+[ApiController]
+public class AccountControllerV4 : ControllerBase
+{
+    private ApplicationDbContext context;
+    private IFBIService fbiService;
+    public AccountControllerV4(ApplicationDbContext context, IFBIService fbiService)
+    {
+        this.context = context;
+        this.fbiService = fbiService;
+    }
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Create(Account account)
+    {
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (context.Accounts.Any(a =&gt; a.Name == account.Name))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.UnprocessableEntity);
+        }
+
+        if (!(await this.fbiService.VerifyWithFBI(account.SSN)))
+        {
+            return new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+        }
+
+        context.Accounts.Add(account);
+        context.SaveChanges();
+        return Ok(account);
+    }
+}
+
+public interface IFBIService
+{
+    Task&lt;bool&gt; VerifyWithFBI(string ssn);
+}
+
+public class FBIService : IFBIService
+{
+    public async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+    {
+        HttpClient client = new HttpClient();
+        string response = await client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+</code></pre>
+
+<pre><code>public async void Test_Account_Create_With_Validation_With_FBIService_mock()
+{
+    //setup
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test2&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    FBIService fbiService = new FBIService();
+
+    Mock&lt;IFBIService&gt; fbiServiceMock = new Mock&lt;IFBIService&gt;();
+    fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult&lt;bool&gt;(true));
+    AccountControllerV4 controller = new AccountControllerV4(context, fbiService);
+
+    //act
+    IActionResult result = await controller.Create(new Account() { Id = 1, Name = &quot;Checking&quot;, SSN = &quot;000-05-1120&quot; });
+    Assert.True(result != null); // the result isn't null
+    Assert.True(context.Accounts.Count() == 1); // the result has the count we expect
+    Assert.True(context.Accounts.First().Id == 1); // the record has the id we expect
+    Assert.True(context.Accounts.First().Name == &quot;Checking&quot;); // it has the right name
+    Assert.True(context.Accounts.First().DateCreated != null); // we saved a date
+    Assert.True(context.Accounts.First().SSN == &quot;000-05-1120&quot;);
+    // test that creating a blank name returns a 422 code
+    IActionResult result2 = await controller.Create(new Account() { Id = 1, Name = &quot;&quot;, SSN = &quot;000-05-1120&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+    // test that creating duplicate names returns 422
+    IActionResult resultUnique = await controller.Create(new Account() { Id = 2, Name = &quot;Checking1&quot;, SSN = &quot;000-05-1120&quot; });
+    IActionResult resultUniqueTest = await controller.Create(new Account() { Id = 3, Name = &quot;Checking1&quot;, SSN = &quot;000-05-1120&quot; });
+    Assert.True((result2 as StatusCodeResult).StatusCode == 422);
+
+
+    // we're now able to test that if the fbi service returns false we handle it with a 400 response
+    Mock&lt;IFBIService&gt; fbiServiceMock2 = new Mock&lt;IFBIService&gt;();
+    fbiServiceMock2.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult&lt;bool&gt;(false));
+    AccountControllerV4 controller2 = new AccountControllerV4(context, fbiServiceMock2.Object);
+    IActionResult result3 = await controller2.Create(new Account() { Id = 4, Name = &quot;CheckingNew&quot;, SSN = &quot;000-05-1120&quot; });
+    Assert.True((result3 as StatusCodeResult).StatusCode == 400);
+
+}
+</code></pre>
+
+<p>In this iteration we changed the FBI service to use an interface and be injected into the controller. This will allow us to test the FBI
+service in isolation and it will allow us to mock the service in our controller. Our methods continue to grow. How can we improve this? Our controller is doing a lot of stuff. How could we move this application to a service bus? That would be difficult because our app is deeply coupled to ASP.NET. Our validation is still in our controller method and should be in it&rsquo;s own class.</p>
+
+<h4 id="iteration-5">Iteration 5</h4>
+
+<p>This one is a major refactor. We&rsquo;re going to break everything into SOLID pieces and add a repository layer over the Entity Framework context. This will let us mock
+our data access layer without needing to use Entity Framework. We&rsquo;re moving validation to it&rsquo;s own set of classes and we&rsquo;re injecting everything.</p>
+
+<pre><code> public class AccountControllerV5 : ControllerBase
+{
+    private IAccountRepositoryV5 repository;
+    private IFBIServiceV5 fbiService;
+    private IAccountModelValiatorV5 modelValidator;
+
+    public AccountControllerV5(IAccountRepositoryV5 repository, IAccountModelValiatorV5 modelValidator, IFBIServiceV5 fbiService)
+    {
+        this.repository = repository;
+        this.fbiService = fbiService;
+        this.modelValidator = modelValidator;
+    }
+
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Create(Account account)
+    {
+        ValidationResultV5 result = this.modelValidator.Validate(account);
+
+        if (result.Success)
+        {
+            if (!await this.fbiService.VerifyWithFBI(account.SSN))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+            }
+
+            this.repository.Create(account);
+
+            return this.Ok(account);
+        }
+        else
+        {
+            return this.StatusCode(422, result);
+        }
+    }
+}
+
+#region validation
+public class ValidationResultV5
+{
+    public bool Success { get; private set; } = true;
+    public string Message { get; private set; } = &quot;&quot;;
+
+    public ValidationResultV5(bool success, string message)
+    {
+        this.Success = success;
+        this.Message = message;
+    }
+
+    public ValidationResultV5()
+    {
+    }
+}
+
+
+public interface IAccountModelValiatorV5
+{
+    ValidationResultV5 Validate(Account account);
+}
+
+public class AccountModelValiatorV5
+{
+    private IAccountRepositoryV5 repository;
+    public AccountModelValiatorV5(IAccountRepositoryV5 repository)
+    {
+        this.repository = repository;
+    }
+
+    public ValidationResultV5 Validate(Account account)
+    {
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new ValidationResultV5(false, &quot;Account name cannot be empty&quot;);
+        }
+
+        if (this.repository.Exists(account.Name))
+        {
+            return new ValidationResultV5(false, &quot;Account name already exists&quot;);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new ValidationResultV5(false, &quot;Customer id cannot be empty&quot;);
+        }
+
+        return new ValidationResultV5();
+    }
+}
+#endregion
+
+#region repository
+public interface IAccountRepositoryV5
+{
+    bool Exists(string name);
+
+    void Create(Account account);
+}
+
+public class AccountRepositoryV5 : IAccountRepositoryV5
+{
+    private ApplicationDbContext context;
+
+    public AccountRepositoryV5(ApplicationDbContext context)
+    {
+        this.context = context;
+    }
+
+    public bool Exists(string name)
+    {
+        return this.context.Accounts.Any(x =&gt; x.Name == name);
+    }
+    public void Create(Account account)
+    {
+        this.context.Accounts.Add(account);
+        context.SaveChanges();
+    }
+}
+#endregion
+
+#region fbiService
+public interface IFBIServiceV5
+{
+    Task&lt;bool&gt; VerifyWithFBI(string ssn);
+}
+
+public class FBIServiceV5 : IFBIServiceV5
+{
+    public FBIServiceV5()
+    {
+    }
+
+    /// &lt;summary&gt;
+    /// This can only be tested in an integration test.
+    /// &lt;/summary&gt;
+    /// &lt;param name=&quot;ssn&quot;&gt;&lt;/param&gt;
+    /// &lt;returns&gt;&lt;/returns&gt;
+    public async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+    {
+        var client = new HttpClient();
+        string response = await client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+</code></pre>
+
+<pre><code>[Fact]
+public async void Test_Account_Create_Happy_Path()
+{
+    //setup
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+    Mock&lt;IAccountModelValiatorV5&gt; modelValidatorMock = new Mock&lt;IAccountModelValiatorV5&gt;();
+    Mock&lt;IFBIServiceV5&gt; fbiServiceMock = new Mock&lt;IFBIServiceV5&gt;();
+
+    // all of our mocks are returning what they should for a successful request
+    fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult&lt;bool&gt;(true));
+    modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;Account&gt;())).Returns(new ValidationResultV5());
+
+    //act
+    AccountControllerV5 controller = new AccountControllerV5(repositoryMock.Object, modelValidatorMock.Object, fbiServiceMock.Object);
+    IActionResult result = await controller.Create(new Account());
+
+    //verify
+    Assert.True((result as OkObjectResult).StatusCode == 200); // ok result
+    modelValidatorMock.Verify(x =&gt; x.Validate(It.IsAny&lt;Account&gt;())); // verify the methods on our objects are actually called
+    fbiServiceMock.Verify(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;()));
+}
+
+
+[Fact]
+public async void Test_Account_Create_Validation_Failed()
+{
+    //setup
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+    Mock&lt;IAccountModelValiatorV5&gt; modelValidatorMock = new Mock&lt;IAccountModelValiatorV5&gt;();
+    Mock&lt;IFBIServiceV5&gt; fbiServiceMock = new Mock&lt;IFBIServiceV5&gt;();
+
+    // all of our mocks are returning what they should for a successful request
+    fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult&lt;bool&gt;(true));
+    repositoryMock.Setup(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+    modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;Account&gt;())).Returns(new ValidationResultV5(false, &quot;error&quot;));
+
+    //act
+    AccountControllerV5 controller = new AccountControllerV5(repositoryMock.Object, modelValidatorMock.Object, fbiServiceMock.Object);
+    IActionResult result = await controller.Create(new Account());
+
+    //verify
+    Assert.True((result as ObjectResult).StatusCode == 422);
+}
+
+
+[Fact]
+public async void Test_Account_Create_FBIService_Failed()
+{
+    //setup
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+    Mock&lt;IAccountModelValiatorV5&gt; modelValidatorMock = new Mock&lt;IAccountModelValiatorV5&gt;();
+    Mock&lt;IFBIServiceV5&gt; fbiServiceMock = new Mock&lt;IFBIServiceV5&gt;();
+
+    // all of our mocks are returning what they should for a successful request
+    fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult&lt;bool&gt;(false));
+    repositoryMock.Setup(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+    modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;Account&gt;())).Returns(new ValidationResultV5());
+
+    //act
+    AccountControllerV5 controller = new AccountControllerV5(repositoryMock.Object, modelValidatorMock.Object, fbiServiceMock.Object);
+    IActionResult result = await controller.Create(new Account());
+
+    //verify
+    Assert.True((result as StatusCodeResult).StatusCode == 400);
+}
+
+
+[Fact]
+public void Test_Account_Model_Validator_Empty_Account_Name()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = &quot;000-05-1120&quot;;
+    account.Name = string.Empty;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.False(result.Success);
+    Assert.Equal(&quot;Account name cannot be empty&quot;, result.Message);
+}
+
+[Fact]
+public void Test_Account_Model_Validator_Valid_Account_Name()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = &quot;000-05-1120&quot;;
+    account.Name = &quot;Test&quot;;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.True(result.Success);
+    Assert.True(result.Message == string.Empty);
+}
+
+[Fact]
+public void Test_Account_Model_Validator_Empty_SSN()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = default(string);
+    account.Name = &quot;test&quot;;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.False(result.Success);
+    Assert.Equal(&quot;Customer id cannot be empty&quot;, result.Message);
+}
+
+[Fact]
+public void Test_Account_Model_Validator_Valid_SSN()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = &quot;000-05-1120&quot;;
+    account.Name = &quot;test&quot;;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.True(result.Success);
+    Assert.Equal(string.Empty, result.Message);
+}
+
+[Fact]
+public void Test_Account_Model_Validator_Account_Exists()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+    repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(true);
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = &quot;000-05-1120&quot;;
+    account.Name = &quot;test&quot;;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.False(result.Success);
+    Assert.Equal(&quot;Account name already exists&quot;, result.Message);
+}
+
+[Fact]
+public void Test_Account_Model_Validator_Account_Not_Exists()
+{
+    Mock&lt;IAccountRepositoryV5&gt; repositoryMock = new Mock&lt;IAccountRepositoryV5&gt;();
+    repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+    AccountModelValiatorV5 valiator = new AccountModelValiatorV5(repositoryMock.Object);
+    Account account = new Account();
+    account.DateCreated = DateTime.Now;
+    account.SSN = &quot;000-05-1120&quot;;
+    account.Name = &quot;test&quot;;
+    ValidationResultV5 result = valiator.Validate(account);
+
+    Assert.True(result.Success);
+    Assert.Equal(string.Empty, result.Message);
+}
+
+
+[Fact]
+public void Test_Account_Repository_Create()
+{ 
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    IAccountRepositoryV5 repository = new AccountRepositoryV5(context);
+    repository.Create(new Account());
+    Assert.True(context.Accounts.Count() == 1);
+}
+
+
+[Fact]
+public void Test_Account_Repository_Exists_Record_Exists()
+{
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    IAccountRepositoryV5 repository = new AccountRepositoryV5(context);
+
+    var account = new Account();
+    account.Name = &quot;testing&quot;;
+    context.Accounts.Add(account);
+    context.SaveChanges();
+
+    bool exists = repository.Exists(&quot;testing&quot;);
+    Assert.True(exists);
+}
+
+[Fact]
+public void Test_Account_Repository_Exists_Record_Not_Exists()
+{
+    DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+    optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+    var context = new ApplicationDbContext(optionsBuilder.Options);
+    IAccountRepositoryV5 repository = new AccountRepositoryV5(context);
+
+    bool exists = repository.Exists(&quot;testing&quot;);
+    Assert.False(exists);
+}
+</code></pre>
+
+<p>That&rsquo;s a lot of change. Our validators, repository and FBI service are now in their own classes and are injected into our controller. This is looking better!
+We&rsquo;ve added lots of unit tests that actually test a unit. I won&rsquo;t go into detail on what these tests do. They should be self explanatory which is how unit tests are supposed to be. The test name should clue you in on what is being tested. The tests should be less than 10 lines long in most cases so there isn&rsquo;t this enormous overhead
+to understand what a test does and changing tests should be easier that our first tests we wrote that were testing everything. Our repository tests are technically integration tests but that&rsquo;s ok there isn&rsquo;t any other way to test it.</p>
+
+<h4 id="iteration-6">Iteration 6</h4>
+
+<h5 id="requirement-change-1">Requirement change</h5>
+
+<p>There has been a requirement change and we need to receive a token from the client web service when accounts are created but we can&rsquo;t return the token in any account responses because it should be private.</p>
+
+<p>We also need to add a Get method to retrieve an account by id.</p>
+
+<p>We need to accept a token in the request but not return it in the response.</p>
+
+<p><strong>There are no changes in this iteration&rsquo;s code. Look at it and think about how you would make the request and response differ.</strong></p>
+
+<pre><code> public class AccountControllerV6 : ControllerBase
+{
+    private IAccountRepositoryV6 repository;
+    private IFBIServiceV6 fbiService;
+    private IAccountModelValiatorV6 modelValidator;
+
+    public AccountControllerV6(IAccountRepositoryV6 repository, IAccountModelValiatorV6 modelValidator, IFBIServiceV6 fbiService)
+    {
+        this.repository = repository;
+        this.fbiService = fbiService;
+        this.modelValidator = modelValidator;
+    }
+
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Create(Account account)
+    {
+        ValidationResultV6 result = this.modelValidator.Validate(account);
+
+        if (result.Success)
+        {
+            if (!await this.fbiService.VerifyWithFBI(account.SSN))
+            {
+                return new StatusCodeResult((int)System.Net.HttpStatusCode.BadRequest);
+            }
+
+            this.repository.Create(account);
+
+            return this.Ok(account);
+        }
+        else
+        {
+            return this.StatusCode(422, result);
+        }
+    }
+
+    [HttpGet]
+    public IActionResult Get(int id)
+    {
+        Account record = this.repository.Find(id);
+
+        if (record == null)
+        {
+            return this.StatusCode(404);
+        }
+        else
+        {
+            return this.Ok(record);
+        }
+    }
+}
+
+#region validation
+public class ValidationResultV6
+{
+    public bool Success { get; private set; } = true;
+    public string Message { get; private set; } = &quot;&quot;;
+
+    public ValidationResultV6(bool success, string message)
+    {
+        this.Success = success;
+        this.Message = message;
+    }
+
+    public ValidationResultV6()
+    {
+    }
+}
+
+
+public interface IAccountModelValiatorV6
+{
+    ValidationResultV6 Validate(Account account);
+}
+
+public class AccountModelValiatorV6
+{
+    private IAccountRepositoryV6 repository;
+    public AccountModelValiatorV6(IAccountRepositoryV6 repository)
+    {
+        this.repository = repository;
+    }
+
+    public ValidationResultV6 Validate(Account account)
+    {
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new ValidationResultV6(false, &quot;Account name cannot be empty&quot;);
+        }
+
+        if (this.repository.Exists(account.Name))
+        {
+            return new ValidationResultV6(false, &quot;Account name already exists&quot;);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new ValidationResultV6(false, &quot;Customer id cannot be empty&quot;);
+        }
+
+        return new ValidationResultV6();
+    }
+}
+#endregion
+
+#region  repository
+public interface IAccountRepositoryV6
+{
+    bool Exists(string name);
+
+    void Create(Account account);
+
+    Account Find(int id);
+}
+
+public class AccountRepositoryV6 : IAccountRepositoryV6
+{
+    private ApplicationDbContext context;
+
+    public AccountRepositoryV6(ApplicationDbContext context)
+    {
+        this.context = context;
+    }
+
+    public bool Exists(string name)
+    {
+        return this.context.Accounts.Any(x =&gt; x.Name == name);
+    }
+    public void Create(Account account)
+    {
+        this.context.Accounts.Add(account);
+        context.SaveChanges();
+    }
+
+    public Account Find(int id)
+    {
+       return this.context.Accounts.FirstOrDefault(x =&gt; x.Id == id);
+    }
+}
+#endregion
+
+#region fbiService
+public interface IFBIServiceV6
+{
+    Task&lt;bool&gt; VerifyWithFBI(string ssn);
+}
+
+public class FBIServiceV6 : IFBIServiceV6
+{
+    HttpClient client;
+    public FBIServiceV6(HttpClient client)
+    {
+        this.client = client;
+    }
+
+    public async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+    {
+        string response = await this.client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+</code></pre>
+
+<p>There isn&rsquo;t a test project for this iteration because I wanted to demonstrate the changing requirements.
+V7 will fix the issues and test them.
+We&rsquo;ve added our method to allow retrieving the account but we&rsquo;re
+exposing the secret token we&rsquo;re not supposed to(this is in Account.cs). Our response and request model
+have diverged! What do we do?
+You may have realized by now that using your database entity as your request model is not a
+good idea. We&rsquo;ve discovered that when the model diverges you&rsquo;re in a pickle. You can hack it to make it
+work which means having extra fields or you split your model into a request and a response.</p>
+
+<p>Another thing to think about now is how would we dump ASP.NET and move our system to a service bus?
+The validation and the FBI service is still in the controller. Would the service bus have to call the controller in code?
+Our system is still too coupled. You should be able to replace the controller layer with a winform app or a service bus and there
+should be no issues there. The root problem is there is still too much happening in our controller.
+We changed the FBI service in this iteration to accept the HttpClient as a parameter. This would let us inject it and test this service later.</p>
+
+<h4 id="iteration-7">Iteration 7</h4>
+
+<p>Create separate request and response models so we can satisfy our requirements that a token is in the request but not in the response.</p>
+
+<pre><code>public class AccountControllerV7 : ControllerBase
+{
+    AccountServiceV7 service;
+
+    public AccountControllerV7(AccountServiceV7 service)
+    {
+        this.service = service;
+    }
+
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Create(AccountRequestModelV7 model)
+    {
+        ActionResultV7 result = await this.service.Create(model);
+        if(result.Success)
+        {
+            return this.Ok(result.Object);
+        }
+        else
+        {
+            return this.StatusCode(400);
+        }
+    }
+
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Get (int id)
+    {
+        ActionResultV7 result = await this.service.Get(id);
+        if (result.Success)
+        {
+            return this.Ok(result.Object);
+        }
+        else
+        {
+            return this.StatusCode(404);
+        }
+    }
+}
+
+
+#region models
+public class AccountRequestModelV7
+{
+    public int Id { get; set; } // internal record identifier for this account
+    public string Name { get; set; } // checking, saving, investment
+    public string SSN { get; set; } // a unique customer id used to globally track a person's bank accounts
+    public DateTime DateCreated { get; set; } // when the account was created
+    public string Token { get; set; } // secret token. We never want to expose this.
+}
+
+public class AccountResponseModelV7
+{
+    public int Id { get; set; } // internal record identifier for this account
+    public string Name { get; set; } // checking, saving, investment
+    public string SSN { get; set; } // a unique customer id used to globally track a person's bank accounts
+    public DateTime DateCreated { get; set; } // when the account was created
+
+}
+
+#endregion
+
+#region service
+
+
+public class ActionResultV7
+{
+    public bool Success { get; private set; }
+
+    public object Object { get; private set; }
+
+    public ActionResultV7(bool success, object @object)
+    {
+        this.Success = success;
+        this.Object = @object;
+    }
+
+    public ActionResultV7(ValidationResultV7 result)
+    {
+        this.Success = result.Success;
+        this.Object = result.Message;
+    }
+}
+
+public class AccountServiceV7
+{
+    private IAccountRepositoryV7 repository;
+    private IFBIServiceV7 fbiService;
+    private IAccountModelValiatorV7 modelValidator;
+    public AccountServiceV7(IAccountRepositoryV7 repository, IAccountModelValiatorV7 modelValidator, IFBIServiceV7 fbiService)
+    {
+        this.repository = repository;
+        this.fbiService = fbiService;
+        this.modelValidator = modelValidator;
+    }
+
+    public async Task&lt;ActionResultV7&gt; Create(AccountRequestModelV7 model)
+    {
+        ValidationResultV7 result = this.modelValidator.Validate(model);
+
+        if (result.Success)
+        {
+            if (!await this.fbiService.VerifyWithFBI(model.SSN))
+            {
+                return new ActionResultV7(false, new ValidationResultV7(false, &quot;Unable to validate with FBI&quot;));
+            }
+
+            var account = new Account(0, model.Name, model.SSN, DateTime.Now, model.Token);
+
+            this.repository.Create(account);
+
+            return new ActionResultV7(true, account);
+        }
+        else
+        {
+            return new ActionResultV7(result);
+        }
+    }
+
+    public async Task&lt;ActionResultV7&gt; Get(int id)
+    {
+        Account record = await this.repository.Find(id);
+        if(record == null)
+        {
+            return new ActionResultV7(false, new ValidationResultV7(false, &quot;Record not found&quot;));
+        }
+        else
+        {
+            var response = new AccountResponseModelV7()
+            {
+                DateCreated = record.DateCreated,
+                SSN = record.SSN,
+                Id = record.Id,
+                Name = record.Name
+            };
+            return new ActionResultV7(true, response);
+        }
+    }
+
+
+}
+
+#endregion
+
+#region validation
+public class ValidationResultV7
+{
+    public bool Success { get; private set; } = true;
+    public string Message { get; private set; } = &quot;&quot;;
+
+    public ValidationResultV7(bool success, string message)
+    {
+        this.Success = success;
+        this.Message = message;
+    }
+
+    public ValidationResultV7()
+    {
+    }
+}
+
+
+public interface IAccountModelValiatorV7
+{
+    ValidationResultV7 Validate(AccountRequestModelV7 account);
+}
+
+public class AccountModelValiatorV7
+{
+    private IAccountRepositoryV7 repository;
+    public AccountModelValiatorV7(IAccountRepositoryV7 repository)
+    {
+        this.repository = repository;
+    }
+
+    public ValidationResultV7 Validate(Account account)
+    {
+        if (string.IsNullOrWhiteSpace(account.Name))
+        {
+            return new ValidationResultV7(false, &quot;Account name cannot be empty&quot;);
+        }
+
+        if (this.repository.Exists(account.Name))
+        {
+            return new ValidationResultV7(false, &quot;Account name already exists&quot;);
+        }
+
+        if (string.IsNullOrWhiteSpace(account.SSN))
+        {
+            return new ValidationResultV7(false, &quot;Customer id cannot be empty&quot;);
+        }
+
+        return new ValidationResultV7();
+    }
+}
+#endregion
+
+#region repository
+public interface IAccountRepositoryV7
+{
+    bool Exists(string name);
+
+    void Create(Account account);
+
+    Task&lt;Account&gt; Find(int id);
+}
+
+public class AccountRepositoryV7 : IAccountRepositoryV7
+{
+    private ApplicationDbContext context;
+
+    public AccountRepositoryV7(ApplicationDbContext context)
+    {
+        this.context = context;
+    }
+
+    public bool Exists(string name)
+    {
+        return this.context.Accounts.Any(x =&gt; x.Name == name);
+    }
+    public void Create(Account account)
+    {
+        this.context.Accounts.Add(account);
+        context.SaveChanges();
+    }
+
+    public async Task&lt;Account&gt; Find(int id)
+    {
+       return await this.context.Accounts.FirstOrDefaultAsync(x =&gt; x.Id == id);
+    }
+}
+#endregion
+
+#region fbiService
+public interface IFBIServiceV7
+{
+    Task&lt;bool&gt; VerifyWithFBI(string ssn);
+}
+
+public class FBIServiceV7 : IFBIServiceV7
+{
+    HttpClient client;
+    public FBIServiceV7(HttpClient client)
+    {
+        this.client = client;
+    }
+
+    public async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+    {
+        string response = await this.client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+</code></pre>
+
+<p>In this iteration we added AccountRequestModelV7 and AccountResponseModelV7 and we created another layer which is the service layer. By creating this service layer we can put all of the business logic like calling the FBI service and validating entities in this layer instead of the controller. This will allow us to move to a service bus later which we couldn&rsquo;t do if the validation was done in the controller. Notice how &ldquo;thin&rdquo; the controller is. It does very little besides call the service.</p>
+
+<ol>
+<li>We&rsquo;re still using inline object initialization.</li>
+<li>We still can&rsquo;t test the dateCreated logic.</li>
+<li>We still can&rsquo;t test individual field level validation our models without testing all of the validation.</li>
+</ol>
+
+<h4 id="iteration-8">Iteration 8</h4>
+
+<p>We&rsquo;re going to introduce Fluent Validation in this iteration. Fluent Validation will let us test individual validators on fields.</p>
+
+<p>We&rsquo;re going to move object mapping to it&rsquo;s own class so we only have to update that logic in once place.</p>
+
+<p>We&rsquo;re going to create a date service to facilitate testing. This interface would let us introduce NodaTime or other date libraries to help with time zone issues.</p>
+
+<pre><code>public class AccountControllerV8 : ControllerBase
+{
+    AccountServiceV8 service;
+
+    public AccountControllerV8(AccountServiceV8 service)
+    {
+        this.service = service;
+    }
+
+    [HttpPost]
+    public async Task&lt;IActionResult&gt; Create(AccountRequestModelV8 model)
+    {
+        ActionResultV8 result = await this.service.Create(model);
+        if (result.Success)
+        {
+            return this.Ok(result.Object);
+        }
+        else
+        {
+            return this.StatusCode(400);
+        }
+    }
+
+    [HttpGet]
+    public async Task&lt;IActionResult&gt; Get(int id)
+    {
+        ActionResultV8 result = await this.service.Get(id);
+        if (result.Success)
+        {
+            return this.Ok(result.Object);
+        }
+        else
+        {
+            return this.StatusCode(404);
+        }
+    }
+}
+
+#endregion
+
+#region models
+public class AccountRequestModelV8
+{
+    public int Id { get; set; } // internal record identifier for this account
+    public string Name { get; set; } // checking, saving, investment
+    public string SSN { get; set; } // a unique customer id used to globally track a person's bank accounts
+    public DateTime DateCreated { get; set; } // when the account was created
+    public string Token { get; set; } // secret token. We never want to expose this.
+
+    public AccountRequestModelV8()
+    {
+
+    }
+
+    public AccountRequestModelV8(int id, string name, string ssn, DateTime dateCreated, string token)
+    {
+        this.Id = id;
+        this.Name = name;
+        this.SSN = ssn;
+        this.DateCreated = dateCreated;
+        this.Token = token;
+    }
+}
+
+public class AccountResponseModelV8
+{
+    public int Id { get; set; } // internal record identifier for this account
+    public string Name { get; set; } // checking, saving, investment
+    public string SSN { get; set; } // a unique customer id used to globally track a person's bank accounts
+    public DateTime DateCreated { get; set; } // when the account was created
+
+    public AccountResponseModelV8(int id, string name, string ssn, DateTime dateCreated)
+    {
+        this.Id = id;
+        this.Name = name;
+        this.SSN = ssn;
+        this.DateCreated = dateCreated;
+    }
+}
+
+#endregion
+
+#region service
+
+public class ActionResultV8
+{
+    public bool Success { get; private set; }
+
+    public object Object { get; private set; }
+
+    public ActionResultV8(bool success, object @object)
+    {
+        this.Success = success;
+        this.Object = @object;
+    }
+
+    public ActionResultV8(ValidationResultV8 result)
+    {
+        this.Success = result.Success;
+        this.Object = result.Message;
+    }
+
+    public ActionResultV8(ValidationResult result)
+    {
+        this.Success = result.IsValid;
+        this.Object = result.Errors.FirstOrDefault()?.ErrorMessage;
+    }
+}
+
+public class AccountServiceV8
+{
+    private IAccountRepositoryV8 repository;
+    private IFBIServiceV8 fbiService;
+    private AccountRequestModelValidatorV8 modelValidator;
+    private IDateServiceV8 dateService;
+    private IAccountMapperV8 mapper;
+    public AccountServiceV8(IAccountRepositoryV8 repository, 
+        AccountRequestModelValidatorV8 modelValidator, 
+        IFBIServiceV8 fbiService, 
+        IDateServiceV8 dateService,
+        IAccountMapperV8 mapper)
+    {
+        this.repository = repository;
+        this.fbiService = fbiService;
+        this.modelValidator = modelValidator;
+        this.dateService = dateService;
+        this.mapper = mapper;
+    }
+
+
+    public async Task&lt;ActionResultV8&gt; Create(AccountRequestModelV8 model)
+    {
+        ValidationResult result = this.modelValidator.Validate(model);
+
+        if (result.IsValid)
+        {
+            if (!await this.fbiService.VerifyWithFBI(model.SSN))
+            {
+                return new ActionResultV8(false, new ValidationResultV8(false, &quot;Unable to validate with FBI&quot;));
+            }
+
+            Account account = this.mapper.MapRequestToEntity(model);
+
+            this.repository.Create(account);
+
+            return new ActionResultV8(true, account);
+        }
+        else
+        {
+            return new ActionResultV8(result);
+        }
+    }
+
+    public async Task&lt;ActionResultV8&gt; Get(int id)
+    {
+        Account record = await this.repository.Find(id);
+        if (record == null)
+        {
+            return new ActionResultV8(false, new ValidationResultV8(false, &quot;Record not found&quot;));
+        }
+        else
+        {
+            AccountResponseModelV8 response = this.mapper.MapEntityToResponse(record);
+
+            return new ActionResultV8(true, response);
+        }
+    }
+
+
+}
+
+#endregion
+
+#region mapper
+
+public interface IAccountMapperV8
+{
+    Account MapRequestToEntity(AccountRequestModelV8 model);
+    AccountResponseModelV8 MapEntityToResponse(Account entity);
+}
+
+/// &lt;summary&gt;
+/// You could also use AutoMapper here. I prefer just using constructors or methods to set the properties.
+/// 
+/// &lt;/summary&gt;
+public class AccountMapperV8 : IAccountMapperV8
+{
+    public Account MapRequestToEntity(AccountRequestModelV8 model)
+    {
+        return new Account(model.Id, model.Name, model.SSN, model.DateCreated, model.Token);
+    }
+
+    public AccountResponseModelV8 MapEntityToResponse(Account entity)
+    {
+        return new AccountResponseModelV8(entity.Id,entity.Name, entity.SSN, entity.DateCreated);
+    }
+}
+
+#endregion
+
+#region validation
+
+public class AccountRequestModelValidatorV8 : AbstractValidator&lt;AccountRequestModelV8&gt;
+{
+    IAccountRepositoryV8 repository;
+    public AccountRequestModelValidatorV8(IAccountRepositoryV8 repository)
+    {
+        this.repository = repository;
+        this.RuleFor(x =&gt; x.Name).NotEmpty();
+        this.RuleFor(x =&gt; x.SSN).NotEmpty();
+        this.RuleFor(x =&gt; x.Token).NotEmpty();
+        this.RuleFor(x =&gt; x.Name).Must(this.AccountValidated).WithMessage(&quot;Account already exists&quot;);
+    }
+
+    private bool AccountValidated(string name)
+    {
+        return !this.repository.Exists(name);
+    }
+
+}
+public class ValidationResultV8
+{
+    public bool Success { get; private set; } = true;
+    public string Message { get; private set; } = &quot;&quot;;
+
+    public ValidationResultV8(bool success, string message)
+    {
+        this.Success = success;
+        this.Message = message;
+    }
+
+    public ValidationResultV8()
+    {
+    }
+}
+#endregion
+
+#region repository
+public interface IAccountRepositoryV8
+{
+    bool Exists(string name);
+
+    void Create(Account account);
+
+    Task&lt;Account&gt; Find(int id);
+}
+
+public class AccountRepositoryV8 : IAccountRepositoryV8
+{
+    private ApplicationDbContext context;
+
+    public AccountRepositoryV8(ApplicationDbContext context)
+    {
+        this.context = context;
+    }
+
+    public bool Exists(string name)
+    {
+        return this.context.Accounts.Any(x =&gt; x.Name == name);
+    }
+    public void Create(Account account)
+    {
+        this.context.Accounts.Add(account);
+        context.SaveChanges();
+    }
+
+    public async Task&lt;Account&gt; Find(int id)
+    {
+        return await this.context.Accounts.FirstOrDefaultAsync(x =&gt; x.Id == id);
+    }
+}
+#endregion
+
+#region fbiService
+public interface IFBIServiceV8
+{
+    Task&lt;bool&gt; VerifyWithFBI(string ssn);
+}
+
+public class FBIServiceV8 : IFBIServiceV8
+{
+    HttpClient client;
+    public FBIServiceV8(HttpClient client)
+    {
+        this.client = client;
+    }
+
+    public async Task&lt;bool&gt; VerifyWithFBI(string ssn)
+    {
+        string response = await this.client.GetStringAsync(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+        if (!string.IsNullOrWhiteSpace(response))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+}
+#endregion
+
+#region dateService
+public interface IDateServiceV8
+{
+    DateTime Now();
+}
+
+public class DateServiceV8 : IDateServiceV8
+{
+    public DateTime Now()
+    {
+        return DateTime.Now;
+    }
+}
+</code></pre>
+
+<h4 id="final-iteration">Final Iteration</h4>
+
+<p>This iteration is just testing what was in iteration 8.</p>
+
+<p>We&rsquo;re introducing Fluent Assertions which is a great testing library.</p>
+
+<pre><code>public class UnitTestAccountV9Controller
+{
+    [Fact]
+    public async void Test_Account_Create_200()
+    {
+        //setup
+        Mock&lt;IAccountServiceV9&gt; serviceMock = new Mock&lt;IAccountServiceV9&gt;();
+        serviceMock.Setup(x =&gt; x.Create(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(Task.FromResult(new ActionResultV9(true, default(object))));
+        AccountV9Controller controller = new AccountV9Controller(serviceMock.Object);
+
+        //act
+        IActionResult result = await controller.Create(new AccountRequestModelV9());
+
+        //verify
+        result.Should().BeOfType&lt;OkObjectResult&gt;();
+        (result as ObjectResult).StatusCode.Should().Be(200);
+        serviceMock.Verify(x =&gt; x.Create(It.IsAny&lt;AccountRequestModelV9&gt;()));
+    }
+
+    [Fact]
+    public async void Test_Account_Create_422()
+    {
+        //setup
+        Mock&lt;IAccountServiceV9&gt; serviceMock = new Mock&lt;IAccountServiceV9&gt;();
+        serviceMock.Setup(x =&gt; x.Create(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(Task.FromResult(new ActionResultV9(false, default(object))));
+        AccountV9Controller controller = new AccountV9Controller(serviceMock.Object);
+
+        //act
+        IActionResult result = await controller.Create(new AccountRequestModelV9());
+
+        //verify
+        result.Should().BeOfType&lt;StatusCodeResult&gt;();
+        (result as StatusCodeResult).StatusCode.Should().Be(422);
+        serviceMock.Verify(x =&gt; x.Create(It.IsAny&lt;AccountRequestModelV9&gt;()));
+    }
+
+
+    [Fact]
+    public async void Test_Account_Get_200()
+    {
+        //setup
+        Mock&lt;IAccountServiceV9&gt; serviceMock = new Mock&lt;IAccountServiceV9&gt;();
+        AccountV9Controller controller = new AccountV9Controller(serviceMock.Object);
+        serviceMock.Setup(x =&gt; x.Get(It.IsAny&lt;int&gt;())).Returns(Task.FromResult(new ActionResultV9(true, new AccountResponseModelV9())));
+
+        //act
+        IActionResult result = await controller.Get(default(int));
+
+        //verify
+        result.Should().BeOfType&lt;OkObjectResult&gt;();
+        (result as OkObjectResult).StatusCode.Should().Be(200);
+        (result as OkObjectResult).Value.Should().NotBeNull();
+        serviceMock.Verify(x =&gt; x.Get(It.IsAny&lt;int&gt;()));
+    }
+
+    [Fact]
+    public async void Test_Account_Get_404()
+    {
+        //setup
+        Mock&lt;IAccountServiceV9&gt; serviceMock = new Mock&lt;IAccountServiceV9&gt;();
+        AccountV9Controller controller = new AccountV9Controller(serviceMock.Object);
+        serviceMock.Setup(x =&gt; x.Get(It.IsAny&lt;int&gt;())).Returns(Task.FromResult(new ActionResultV9(false, default(object))));
+
+        //act
+        IActionResult result = await controller.Get(default(int));
+
+        //verify
+        result.Should().BeOfType&lt;StatusCodeResult&gt;();
+        (result as StatusCodeResult).StatusCode.Should().Be(404);
+        serviceMock.Verify(x =&gt; x.Get(It.IsAny&lt;int&gt;()));
+    }
+
+    [Fact]
+    public async void Test_AccountService_Create_Success()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repository = new Mock&lt;IAccountRepositoryV9&gt;();
+        Mock&lt;IAccountMapperV9&gt; mapperMock = new Mock&lt;IAccountMapperV9&gt;();
+        Mock&lt;IAccountModelValidator&gt; modelValidatorMock = new Mock&lt;IAccountModelValidator&gt;();
+        Mock&lt;IDateServiceV9&gt; dateServiceMock = new Mock&lt;IDateServiceV9&gt;();
+        Mock&lt;IFBIServiceV9&gt; fbiServiceMock = new Mock&lt;IFBIServiceV9&gt;();
+
+        modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(new FluentValidation.Results.ValidationResult());
+        fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult(true));
+        mapperMock.Setup(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;())).Returns(new AccountResponseModelV9());
+        repository.Setup(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+
+        IAccountServiceV9 service = new AccountServiceV9(repository.Object, modelValidatorMock.Object, fbiServiceMock.Object, dateServiceMock.Object, mapperMock.Object);
+
+        //act
+        ActionResultV9 result = await service.Create(new AccountRequestModelV9());
+
+        //verify
+        result.Success.Should().BeTrue();
+        result.Object.Should().BeOfType&lt;AccountResponseModelV9&gt;();
+        modelValidatorMock.Verify(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;()));
+        mapperMock.Verify(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;()));
+        repository.Verify(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+        fbiServiceMock.Verify(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;()));
+        dateServiceMock.Verify(x =&gt; x.Now());
+    }
+
+    [Fact]
+    public async void Test_AccountService_Create_ValidationFailure()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repository = new Mock&lt;IAccountRepositoryV9&gt;();
+        Mock&lt;IAccountMapperV9&gt; mapperMock = new Mock&lt;IAccountMapperV9&gt;();
+        Mock&lt;IAccountModelValidator&gt; modelValidatorMock = new Mock&lt;IAccountModelValidator&gt;();
+        Mock&lt;IDateServiceV9&gt; dateServiceMock = new Mock&lt;IDateServiceV9&gt;();
+        Mock&lt;IFBIServiceV9&gt; fbiServiceMock = new Mock&lt;IFBIServiceV9&gt;();
+
+        modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(new ValidationResult(new List&lt;ValidationFailure&gt;() { new ValidationFailure(default(string), default(string)) }));
+        fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult(true));
+        mapperMock.Setup(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;())).Returns(new AccountResponseModelV9());
+        repository.Setup(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+
+        IAccountServiceV9 service = new AccountServiceV9(repository.Object, modelValidatorMock.Object, fbiServiceMock.Object, dateServiceMock.Object, mapperMock.Object);
+
+        //act
+        ActionResultV9 result = await service.Create(new AccountRequestModelV9());
+
+        //verify
+        result.Success.Should().BeFalse();
+        result.Object.Should().BeOfType&lt;List&lt;ValidationFailure&gt;&gt;();
+        modelValidatorMock.Verify(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;()));
+    }
+
+    [Fact]
+    public async void Test_AccountService_Create_FBIService_Failure()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repository = new Mock&lt;IAccountRepositoryV9&gt;();
+        Mock&lt;IAccountMapperV9&gt; mapperMock = new Mock&lt;IAccountMapperV9&gt;();
+        Mock&lt;IAccountModelValidator&gt; modelValidatorMock = new Mock&lt;IAccountModelValidator&gt;();
+        Mock&lt;IDateServiceV9&gt; dateServiceMock = new Mock&lt;IDateServiceV9&gt;();
+        Mock&lt;IFBIServiceV9&gt; fbiServiceMock = new Mock&lt;IFBIServiceV9&gt;();
+
+        modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(new FluentValidation.Results.ValidationResult());
+        fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult(false));
+        mapperMock.Setup(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;())).Returns(new AccountResponseModelV9());
+        repository.Setup(x =&gt; x.Create(It.IsAny&lt;Account&gt;()));
+
+        IAccountServiceV9 service = new AccountServiceV9(repository.Object, modelValidatorMock.Object, fbiServiceMock.Object, dateServiceMock.Object, mapperMock.Object);
+
+        //act
+        ActionResultV9 result = await service.Create(new AccountRequestModelV9());
+
+        //verify
+        result.Success.Should().BeFalse();
+        result.Object.Should().BeOfType&lt;ValidationResultV9&gt;();
+        fbiServiceMock.Verify(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;()));
+    }
+
+    [Fact]
+    public async void Test_AccountService_Get_Found()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repository = new Mock&lt;IAccountRepositoryV9&gt;();
+        Mock&lt;IAccountMapperV9&gt; mapperMock = new Mock&lt;IAccountMapperV9&gt;();
+        Mock&lt;IAccountModelValidator&gt; modelValidatorMock = new Mock&lt;IAccountModelValidator&gt;();
+        Mock&lt;IDateServiceV9&gt; dateServiceMock = new Mock&lt;IDateServiceV9&gt;();
+        Mock&lt;IFBIServiceV9&gt; fbiServiceMock = new Mock&lt;IFBIServiceV9&gt;();
+
+        modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(new ValidationResult());
+        fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult(true));
+        mapperMock.Setup(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;())).Returns(new AccountResponseModelV9());
+        repository.Setup(x =&gt; x.Find(It.IsAny&lt;int&gt;())).Returns(Task.FromResult&lt;Account&gt;(new Account()));
+
+        IAccountServiceV9 service = new AccountServiceV9(repository.Object, modelValidatorMock.Object, fbiServiceMock.Object, dateServiceMock.Object, mapperMock.Object);
+
+        //act
+        ActionResultV9 result = await service.Get(default(int));
+
+        //verify
+        result.Success.Should().BeTrue();
+        result.Object.Should().BeOfType&lt;AccountResponseModelV9&gt;();
+        mapperMock.Verify(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;()));
+        repository.Verify(x =&gt; x.Find(It.IsAny&lt;int&gt;()));
+    }
+
+    [Fact]
+    public async void Test_AccountService_Get_Not_Found()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repository = new Mock&lt;IAccountRepositoryV9&gt;();
+        Mock&lt;IAccountMapperV9&gt; mapperMock = new Mock&lt;IAccountMapperV9&gt;();
+        Mock&lt;IAccountModelValidator&gt; modelValidatorMock = new Mock&lt;IAccountModelValidator&gt;();
+        Mock&lt;IDateServiceV9&gt; dateServiceMock = new Mock&lt;IDateServiceV9&gt;();
+        Mock&lt;IFBIServiceV9&gt; fbiServiceMock = new Mock&lt;IFBIServiceV9&gt;();
+
+        modelValidatorMock.Setup(x =&gt; x.Validate(It.IsAny&lt;AccountRequestModelV9&gt;())).Returns(new ValidationResult());
+        fbiServiceMock.Setup(x =&gt; x.VerifyWithFBI(It.IsAny&lt;string&gt;())).Returns(Task.FromResult(true));
+        mapperMock.Setup(x =&gt; x.MapEntityToResponse(It.IsAny&lt;Account&gt;())).Returns(new AccountResponseModelV9());
+        repository.Setup(x =&gt; x.Find(It.IsAny&lt;int&gt;())).Returns(Task.FromResult&lt;Account&gt;(null));
+
+        IAccountServiceV9 service = new AccountServiceV9(repository.Object, modelValidatorMock.Object, fbiServiceMock.Object, dateServiceMock.Object, mapperMock.Object);
+
+        //act
+        ActionResultV9 result = await service.Get(default(int));
+
+        //verify
+        result.Success.Should().BeFalse();
+        repository.Verify(x =&gt; x.Find(It.IsAny&lt;int&gt;()));
+    }
+
+    [Fact]
+    public void Test_Mapper_MapRequestToEntity()
+    {
+        //setup
+        IAccountMapperV9 mapper = new AccountMapperV9();
+
+        var request = new AccountRequestModelV9(1, &quot;A&quot;, &quot;000-05-1120&quot;, DateTime.Parse(&quot;7/3/2018 4:41:42 PM&quot;), &quot;A&quot;);
+
+        //act
+        Account entity = mapper.MapRequestToEntity(request);
+
+        //verify
+        entity.DateCreated.Should().Be(DateTime.Parse(&quot;7/3/2018 4:41:42 PM&quot;));
+        entity.Id.Should().Be(1);
+        entity.Name.Should().Be(&quot;A&quot;);
+        entity.SSN.Should().Be(&quot;000-05-1120&quot;);
+        entity.Token.Should().Be(&quot;A&quot;);
+    }
+
+    [Fact]
+    public void Test_Mapper_MapEntityToResponse()
+    {
+        //setup
+        IAccountMapperV9 mapper = new AccountMapperV9();
+
+        var entity = new Account(1, &quot;A&quot;, &quot;000-05-1120&quot;, DateTime.Parse(&quot;7 /3/2018 4:41:42 PM&quot;), &quot;A&quot;);
+
+        //act
+        AccountResponseModelV9 response = mapper.MapEntityToResponse(entity);
+
+        //verify
+        response.DateCreated.Should().Be(DateTime.Parse(&quot;7/3/2018 4:41:42 PM&quot;));
+        response.Id.Should().Be(1);
+        response.Name.Should().Be(&quot;A&quot;);
+        response.SSN.Should().Be(&quot;000-05-1120&quot;);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_Name_NotEmpty_Valid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldNotHaveValidationErrorFor(x =&gt; x.Name, &quot;A&quot;);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_Name_NotEmpty_Invalid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.Name, &quot;&quot;);
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.Name, null as string);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_NameUnique_Valid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldNotHaveValidationErrorFor(x =&gt; x.Name, &quot;A&quot;);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_NameUnique_Invalid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(true);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.Name, &quot;A&quot;);
+    }
+
+
+    [Fact]
+    public void Test_ModelValidator_SSN_NotEmpty_Valid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldNotHaveValidationErrorFor(x =&gt; x.SSN, &quot;000-05-1120&quot;);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_SSN_NotEmpty_Invalid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.SSN, string.Empty);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_Token_NotEmpty_Valid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldNotHaveValidationErrorFor(x =&gt; x.Token, &quot;A&quot;);
+    }
+
+    [Fact]
+    public void Test_ModelValidator_Token_NotEmpty_Invalid()
+    {
+        //setup
+        Mock&lt;IAccountRepositoryV9&gt; repositoryMock = new Mock&lt;IAccountRepositoryV9&gt;();
+        repositoryMock.Setup(x =&gt; x.Exists(It.IsAny&lt;string&gt;())).Returns(false);
+        AccountRequestModelValidatorV9 validator = new AccountRequestModelValidatorV9(repositoryMock.Object);
+
+        //act and verify
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.Token, &quot;&quot;);
+        validator.ShouldHaveValidationErrorFor(x =&gt; x.Token, null as string);
+    }
+
+
+    [Fact]
+    public void Test_Account_Repository_Create()
+    {
+        //setup
+        DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+        optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+        var context = new ApplicationDbContext(optionsBuilder.Options);
+        IAccountRepositoryV9 repository = new AccountRepositoryV9(context);
+
+        //act
+        repository.Create(new Account());
+
+        //verify
+        context.Accounts.Count().Should().Be(1);
+    }
+
+
+    [Fact]
+    public void Test_Account_Repository_Exists_Record_Exists()
+    {
+        //setup
+        DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+        optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+        var context = new ApplicationDbContext(optionsBuilder.Options);
+        IAccountRepositoryV9 repository = new AccountRepositoryV9(context);
+        context.Accounts.Add(new Account(default(int), &quot;test&quot;, default(string), default(DateTime), default(string)));
+        context.SaveChanges();
+
+        //act
+        bool exists = repository.Exists(&quot;test&quot;);
+
+        //verify
+        exists.Should().BeTrue();
+    }
+
+    [Fact]
+    public void Test_Account_Repository_Exists_Record_Not_Exists()
+    {
+        //setup
+        DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+        optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+        var context = new ApplicationDbContext(optionsBuilder.Options);
+        IAccountRepositoryV9 repository = new AccountRepositoryV9(context);
+
+        //act
+        bool exists = repository.Exists(&quot;testing&quot;);
+        exists.Should().BeFalse();
+
+    }
+
+    [Fact]
+    public async void Test_Account_Repository_Find_Record_Exists()
+    {
+        //setup
+        DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+        optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+        var context = new ApplicationDbContext(optionsBuilder.Options);
+        IAccountRepositoryV9 repository = new AccountRepositoryV9(context);
+        context.Accounts.Add(new Account(1, default(string), default(string), default(DateTime), default(string)));
+        context.SaveChanges();
+
+        //act
+        Account record = await repository.Find(1);
+
+        //verify
+        record.Should().NotBeNull();
+    }
+
+    [Fact]
+    public async void Test_Account_Repository_Find_Record_Not_Exists()
+    {
+        //setup
+        DbContextOptionsBuilder optionsBuilder = new DbContextOptionsBuilder();
+        optionsBuilder.UseInMemoryDatabase(&quot;test1&quot;);
+        var context = new ApplicationDbContext(optionsBuilder.Options);
+        IAccountRepositoryV9 repository = new AccountRepositoryV9(context);
+
+        //act
+        Account record = await repository.Find(1);
+
+        //verify
+        record.Should().BeNull();
+
+    }
+
+    [Fact]
+    public void Test_DatetimeService()
+    {
+        //setup
+        IDateServiceV9 service = new DateServiceV9();
+        DateTime now = DateTime.Now;
+
+        //act
+        DateTime result = service.Now();
+
+        //verify
+        result.Should().BeCloseTo(now, 1000);
+    }
+
+
+    [Fact]
+    public async void IntegrationTest_FBIService_Success()
+    {
+        //setup
+        IFBIServiceV9 service = new FBIServiceV9(&quot;https://jsonplaceholder.typicode.com/posts/1&quot;);
+
+        //act
+        bool result = await service.VerifyWithFBI(default(string));
+
+        //verify
+        result.Should().BeTrue();
+    }
+
+    [Fact]
+    public async void IntegrationTest_FBIService_Failure()
+    {
+        //setup
+        IFBIServiceV9 service = new FBIServiceV9(&quot;https://jsonplaceholder.typicode.com/posts/fail&quot;);
+
+        //act
+        bool result = await service.VerifyWithFBI(default(string));
+
+        //verify
+        result.Should().BeFalse();
+    }
+</code></pre>
+
+<p>We made lots of changes to really make our code testable.
+We introduced Fluent Validation to make testing easier for individual fields.
+We wrote all of our tests including an integration test for the FBI service</p>
+
+<p>There is at least one big issue I still see with these tests. There is a lot of
+repetitive setup code. I would take the time to build factories to build your default mocks and
+make the code as DRY as possible.</p>
+
+<p>We don&rsquo;t have end to end tests. I&rsquo;ll leave that for another article.</p>
+
+<h3 id="summary">Summary</h3>
+
+<p>Use interfaces and dependency injection. Never directly depend on the database, file system, date libraries or network in your application. Unit tests
+should be deterministic and you can&rsquo;t do that if you have these types of dependencies.</p>
+
+<p>Only test the actual unit you should be testing not every little detail. Test should not overlap.</p>
+
+<p>Write single responsibility code.</p>
+
+<p>Write fast tests whenever possible.</p>
+
+<p>If you don&rsquo;t write SOLID code your project will not handle requirement changes and will turn into a ball of mud.
+By enforcing SOLID from the beginning of a project, even though it takes more code, it is significantly more likely that your project can evolve.
+Methods that do different things based on a parameter or setting should be two functions.
+Classes that handle different things should be split and the functionality combined with a facade or a mediator. &ldquo;Different things&rdquo; is subjective and it&rsquo;s
+difficult to give you hard and fast rules. Generally if the code is difficult to work on and test and it&rsquo;s not doing something hard then it should be refactored.</p>
+
+<p>That&rsquo;s the end. I hope you learned something that makes coding easier.</p>
+
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/articles/entity-framework-example/" title="ASP.NET Core API with Entity Framework"> <i class="fa fa-chevron-left"></i><label>ASP.NET Core API with Entity Framework</label></a>
+    <a class="nav nav-next" href="/documentation/account/" title="Subscription" style="margin-right: 0px;"><label>Subscription</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="articles/chaos-to-solid/_index.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

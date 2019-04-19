@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Generated Code on Codenesium Documentation</title>
+    <link>/documentation/codenesium/generatedcode/</link>
+    <description>Recent content in Generated Code on Codenesium Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/documentation/codenesium/generatedcode/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AppSettings</title>
+      <link>/documentation/codenesium/generatedcode/appsettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/appsettings/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Autofac</title>
+      <link>/documentation/codenesium/generatedcode/autofac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/autofac/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Business Objects</title>
+      <link>/documentation/codenesium/generatedcode/businessobjects/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/businessobjects/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Controllers</title>
+      <link>/documentation/codenesium/generatedcode/controllers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/controllers/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Database Migrations</title>
+      <link>/documentation/codenesium/generatedcode/databasemigrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/databasemigrations/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>/documentation/codenesium/generatedcode/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/deployment/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Entity Framework</title>
+      <link>/documentation/codenesium/generatedcode/entityframework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/entityframework/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Filters</title>
+      <link>/documentation/codenesium/generatedcode/filters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/filters/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Fluent Validation</title>
+      <link>/documentation/codenesium/generatedcode/fluentvalidation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/fluentvalidation/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/documentation/codenesium/generatedcode/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/logging/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Model Validation</title>
+      <link>/documentation/codenesium/generatedcode/modelvalidators/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/modelvalidators/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Project Structure</title>
+      <link>/documentation/codenesium/generatedcode/projectstructure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/projectstructure/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Repositories</title>
+      <link>/documentation/codenesium/generatedcode/repositories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/repositories/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Security</title>
+      <link>/documentation/codenesium/generatedcode/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/security/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Startus.cs</title>
+      <link>/documentation/codenesium/generatedcode/startup/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/startup/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Swagger</title>
+      <link>/documentation/codenesium/generatedcode/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/swagger/</guid>
+      <description>TODO</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>/documentation/codenesium/generatedcode/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/generatedcode/testing/</guid>
+      <description>TODO</description>
+    </item>
+    
+  </channel>
+</rss>

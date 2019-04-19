@@ -1,0 +1,609 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Application Generation for .NET Core + React">
+    <meta name="author" content="Codenesium LLC">
+	<meta http-equiv="cache-control" content="no-cache, must-revalidate, post-check=0, pre-check=0">
+    <link rel="icon" href="/img/favicon.png">
+	<title>Codenesium - Application Generation for .NET Core + React</title>
+	<!-- Bootstrap Core CSS -->
+	<link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+	<!-- Theme CSS -->
+	<link href="css/site.css?v=1" rel="stylesheet">
+	<!-- Custom Fonts -->
+	<link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+	<link href="https://fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+		<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<script>
+	  window.dataLayer = window.dataLayer || [];
+	  function gtag(){dataLayer.push(arguments);}
+	  gtag('js', new Date());
+
+	  gtag('config', 'AW-851792048');
+	</script>
+</head>
+
+<body id="page-top" class="index">
+<div id="skipnav"><a href="#maincontent">Skip to main content</a></div>
+
+    <!-- Navigation -->
+    <nav id="mainNav" class="navbar navbar-default navbar-fixed-top navbar-custom">
+        <div class="container">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header page-scroll">
+                <button id="navButton" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span> Menu <i class="fa fa-bars"></i>
+                </button>
+                <a class="navbar-brand" href="#page-top">Codenesium</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="hidden">
+                        <a href="#page-top"></a>
+                    </li>
+                    <li>
+                       <a class="" href="https://s3-us-west-2.amazonaws.com/codenesium-releases/Setup.exe" onclick="ga('send', 'event', 'DownloadButtonHeader', 'click');">Download</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#plans">Plans</a>
+                    </li>
+                    <li class="page-scroll">
+                        <a href="#contact">Contact</a>
+                    </li>
+					 <li>
+                        <a onclick="ga('send', 'event', 'Documentation, 'click');" href="/documentation">Documentation</a>
+                    </li>
+                    <li>
+                        <a onclick="ga('send', 'event', 'Register', 'click');" href="/Account/app/register">Register</a>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+
+    <!-- Header -->
+    <header>
+        <div class="container" id="maincontent" tabindex="-1">
+            <div class="row">
+                <div class="col-lg-12">
+                    <img class="img-responsive" src="img/codenesium.png" alt="">
+  
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Portfolio Grid Section -->
+    <section id="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Application in minutes</h2>
+                    <hr class="star-gears-primary">
+                </div>
+            </div>
+            <div class="row">
+
+                <div class="col-lg-12 text-center">
+                      <p>We generate a ASP.NET Core REST API with a React application for your MSSQL or PostgreSQL database. </p>       
+                      <br />
+                      <br />
+					  <p>
+					  <a href="https://s3-us-west-2.amazonaws.com/codenesium-releases/Setup.exe" onclick="ga('send', 'event', 'DownloadButtonMain', 'click');">Download</a> to get started
+					  </p> 
+					  <br />
+                </div>
+				
+				<div class="col-lg-12 text-center" style="margin-bottom:50px;"><h3>Or</h3></div>
+				
+					
+				<div class="col-lg-12 text-center" style="margin-bottom:50px;">
+				  <div style="width:300px;margin-left:auto;margin-right:auto;">
+					<p>Submit a SQL Server database schema and within 24 hours a link for a generated app and a link to purchase the source code will be emailed to you</p>  		
+					  <form onsubmit="return false;">
+					  <label for="name">Your Email</label>
+					  <input type="email" class="form-control" id="email" name="email" required/>
+					  <br />
+					   <label for="script">SQL Server Create Database Script</label>
+					  <textarea style="height:200px;" class="form-control" id="script" name="script" required>Paste your schema here. Right click on a database in SQL Server Management Studio and click Tasks then Generate Scripts.</textarea>
+					  <br />
+					  <button id="submitWebProject" name="submitWebProject" class="btn btn-primary pull-right">Submit</button>
+					  </form>
+				  </div>
+                </div>
+				
+	
+
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <ul class="nav nav-pills nav-justified thumbnail setup-panel">
+                            <li class="stepper-active active">
+                                <a href="#step-1">
+                                    <h4 class="list-group-item-heading">Step 1</h4>
+                                    <p class="list-group-item-text">Get Some REST</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-2">
+                                    <h4 class="list-group-item-heading">Step 2</h4>
+                                    <p class="list-group-item-text">Install the Client</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-3">
+                                    <h4 class="list-group-item-heading">Step 3</h4>
+                                    <p class="list-group-item-text">Connect to SQL</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#step-4">
+                                    <h4 class="list-group-item-heading">Step 4</h4>
+                                    <p class="list-group-item-text">Deploy and Sync</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+				
+				  <div class="row setup-content" id="step-1">
+                    <div class="col-xs-12">
+                        <div class="col-md-12 well">
+                            <h4 class="text-center">Get some REST</h4>
+                            <p>Spend your time solving the business problem not on boilerplate.</p>
+                            <p>All generated apps have a Swagger endpoint with access to clients in 20+ languages.</p>
+                            <p>Regenerate your app when there are schema changes.</p>
+							<p>Sync the new code into your solution without losing your changes.</p>
+                            <br />
+                            <a href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feNebula/swagger" onclick="ga('send', 'event', 'ViewDemoGetSomeRest', 'click');" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-fighter-jet" aria-hidden="true"></i>View a demo REST API</a>
+                            <br />
+                            <br />
+                            <a href="https://github.com/codenesium/samples" target="_blank" onclick="ga('send', 'event', 'ViewSourceGetSomeRest', 'click');" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i>View samples on Github</a>
+                            <br />
+                            <br />
+							<button onclick="return openPureChat();" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-envelope"></i>Request a demo</button>
+							<br />
+                            <br />
+						    <a href="https://www.codenesium.com/documentation" onclick="ga('send', 'event', 'TechnicalDetails', 'click');">
+						    <button class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-map"></i>Documentation</button>
+						    </a>
+                        </div>
+                    </div>
+                </div>
+				
+                <div class="row setup-content" id="step-2">
+                    <div class="col-xs-12">
+                        <div class="col-md-12 well">
+                            <h4 class="text-center">Install the client</h4>
+                            <p>Install the Codenesium client. The latest client can be found <a class="" href="https://s3-us-west-2.amazonaws.com/codenesium-releases/Setup.exe" onclick="gtag_report_conversion('https://s3-us-west-2.amazonaws.com/codenesium-releases/Setup.exe')">here</a>.</p>
+                            <p>Interact with the generated app in the playground before you purchase.</p>
+						    <p>We don't need your credit card until you want to download the source code.</p>
+						    <br />
+                            <a href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feESPIOT/swagger" onclick="ga('send', 'event', 'ViewDemoInstallTheClient', 'click');" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-fighter-jet" aria-hidden="true"></i>View a demo REST API</a>
+                            <br />
+                            <br />
+                            <a href="https://github.com/codenesium/samples" target="_blank" onclick="ga('send', 'event', 'ViewSourceGetSomeRest', 'click');" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i>View samples on Github</a>
+                            <br />
+                            <br />
+							<button onclick="return openPureChat();" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-envelope"></i>Request a demo</button>
+							<br />
+                            <br />
+						    <a href="https://www.codenesium.com/documentation" onclick="ga('send', 'event', 'TechnicalDetails', 'click');">
+						    <button class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-map"></i>Documentation</button>
+						    </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content" id="step-3">
+                    <div class="col-xs-12">
+                        <div class="col-md-12 well">
+                            <h4 class="text-center">Connect to SQL.</h4>
+                            <p>Connect to a SQL Server or PostgreSQL database.</p>
+							<p>Make changes with the Database Forge.</p>
+							<p>Add migrations for your playground server test data.</p>
+							 <br />
+                            <a href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feFileService/swagger" onclick="ga('send', 'event', 'ViewDemoConnextToSQL', 'click');" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-fighter-jet" aria-hidden="true"></i>View a demo REST API</a>
+                            <br />
+                            <br />
+                            <a href="https://github.com/codenesium/samples" target="_blank" onclick="ga('send', 'event', 'ViewSourceGetSomeRest', 'click');" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i>View samples on Github</a>
+                            <br />
+                            <br />
+							<button onclick="return openPureChat();" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-envelope"></i>Request a demo</button>
+							<br />
+                            <br />
+						    <a href="https://www.codenesium.com/documentation" onclick="ga('send', 'event', 'TechnicalDetails', 'click');">
+						    <button class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-map"></i>Documentation</button>
+						    </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="row setup-content" id="step-4">
+                    <div class="col-xs-12">
+                        <div class="col-md-12 well">
+                            <h4 class="text-center">Deploy</h4>
+                            <p> Click deploy in the client.</p>
+                            <p> Your schema is uploaded to our cloud generation system.</p>
+                            <p> We sync the source code to a local directory you have provided.</p>
+                            <p> Use your app immediately on the playground server.</p>
+							 <br />
+                            <a href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feNebula/swagger" onclick="ga('send', 'event', 'ViewDemoDeploy', 'click');" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-fighter-jet" aria-hidden="true"></i>View a demo REST API</a>
+                            <br />
+                            <br />
+                            <a href="https://github.com/codenesium/samples" target="_blank" onclick="ga('send', 'event', 'ViewSourceGetSomeRest', 'click');" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i>View samples on Github</a>
+                            <br />
+                            <br />
+							<button onclick="return openPureChat();" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-envelope"></i>Request a demo</button>
+							<br />
+                            <br />
+						    <a href="https://www.codenesium.com/documentation" onclick="ga('send', 'event', 'TechnicalDetails', 'click');">
+						    <button class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-map"></i>Documentation</button>
+						    </a>
+                        </div>
+                    </div>
+                </div>
+        </div>
+    </section>
+	
+	<section id="samples">
+        <div class="container">
+            <div class="row">
+			    <h4 class="text-center">React Apps</h4>
+				<br />
+				<div class="col-lg-12 text-center">
+					<a onclick="ga('send', 'event', 'ViewDemoPetStore', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359fePetStore" target="_blank" class="btn btn-primary btn-lg">Pet Store</a>
+					<br />
+					<br />
+					<a onclick="ga('send', 'event', 'ViewDemoStackOVerflow', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feStackOverflow" target="_blank" class="btn btn-primary btn-lg">Stack Overflow</a>
+					<br />
+					<br />
+					<a onclick="ga('send', 'event', 'ViewDemoESPIOT', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feESPIOT" target="_blank" class="btn btn-primary btn-lg">ESPIOT</a>
+					<br />
+					<br />
+					<a onclick="ga('send', 'event', 'ViewDemoStudioResourceManager', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feStudioResourceManager" target="_blank" class="btn btn-primary btn-lg">Studio Resource Manager</a>
+				    <br />
+					<br />
+					<a onclick="ga('send', 'event', 'ViewDemoTicketingCRM', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feTicketingCRM" target="_blank" class="btn btn-primary btn-lg">Ticketing CRM</a>
+					 <br />
+					<br />
+					<a onclick="ga('send', 'event', 'ViewDemoFileService', 'click');" href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feFileService" target="_blank" class="btn btn-primary btn-lg">File Service</a>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	
+	<section id="youtube">
+        <div class="container">
+            <div class="row">
+			    <h4 class="text-center">Youtube Demo</h4>
+				<br />
+				<div class="col-lg-12 text-center">
+					  <iframe width="375" height="200" src="https://www.youtube.com/embed/tvScMDq_xGs?rel=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+
+    <!--pricing section-->
+    <section id="plans">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Plans</h2>
+                    <hr class="star-bolt-primary">
+                    <br />
+                </div>
+            </div>
+            <div class="row">
+				 <!-- item -->
+				<div class="col-md-3 text-center">
+                    <div class="panel panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Free</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>$0 / Month</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>1</b> project</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>REST API generation</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>React app</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Unit and integration tests</li>
+				     		<li class="list-group-item"><i class="fa fa-check"></i>Database Forge</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Swagger integration</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Docker integration</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Client libraries for API</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>10</b> table max</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Local source code sync</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Automatic build</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Playground server</li>
+							<li class="list-group-item"><i class="fa square-o"></i>0 hours support included</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="col-md-3 text-center">
+                    <div class="panel panel-danger panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Bronze</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>$50 / Month</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>2</b> projects</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>REST API generation</li>
+						    <li class="list-group-item"><i class="fa fa-check"></i>React app</li>
+						    <li class="list-group-item"><i class="fa fa-check"></i>Unit and integration tests</li>
+				     		<li class="list-group-item"><i class="fa fa-check"></i>Database Forge</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Swagger integration</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Docker integration</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Client libraries for API</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>25</b> table max</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Local source code sync</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Automatic build</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Playground server</li>
+							<li class="list-group-item"><i class="fa square-o"></i>0 hours support included</li>
+                        </ul>
+
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="col-md-3 text-center">
+                    <div class="panel panel-warning panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Silver</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>$100 / Month</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>5</b> projects</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>REST API generation</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>React app</li>
+						    <li class="list-group-item"><i class="fa fa-check"></i>Unit and integration tests</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Database Forge</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Swagger integration</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Docker integration</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Client libraries for API</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>50</b> table max</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Local source code sync</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Automatic build</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Playground server</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>1/2 hour support per month</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /item -->
+                <!-- item -->
+                <div class="col-md-3 text-center">
+                    <div class="panel panel-success panel-pricing">
+                        <div class="panel-heading">
+                            <i class="fa fa-desktop"></i>
+                            <h3>Gold</h3>
+                        </div>
+                        <div class="panel-body text-center">
+                            <p><strong>$250 / Month</strong></p>
+                        </div>
+                        <ul class="list-group text-center">
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>5</b> projects</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>REST API generation</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>React app</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Unit and integration tests</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>Database Forge</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Swagger integration</li>
+						    <li class="list-group-item"><i class="fa fa-check"></i>Docker integration</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Client libraries for API</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i><b>100</b> table max</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Local source code sync</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Automatic build</li>
+                            <li class="list-group-item"><i class="fa fa-check"></i>Playground server</li>
+							<li class="list-group-item"><i class="fa fa-check"></i>1 hour support per month</li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- /item -->
+            </div>
+        </div>
+    </section>
+	
+	
+	 
+	 <!-- Features Section -->
+	<section id="features">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Features</h2>
+					<hr class="star-envelope-primary">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p>ASP.NET Core source code</p>
+					<p>React application written in TypeScript</p>
+					<p>Security included</p>
+					<p>Cross platform solution</p>
+					<p>Supports standard REST methods</p>
+					<p>Single responsibility code<p>
+					<p>Built to be modified and extended</p>
+					<p>StyleCop integration<p>
+					<p>Record paging and limits on request size</p>
+					<p>Unit and integration tests</p>
+					<p>Field validation with Fluent Validation</p>
+					<p>Multi-tenant support</p>
+					<p>In memory integration tests with SQLite</p>
+					<p>.NET and TypeScript client</p>
+					<p>Easy database schema editor</p>
+					<p>Model customization like field renaming</p>
+					<p>Virtual constraints and foreign keys</p>
+					<p>Support for soft deletes</p>
+					<p>Constraints and foreign keys exposed through the API</p>
+					<p>Support for SQL Server views</p>
+					<p>Docker support</p>
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	 <!-- Extras Section -->
+	<section id="extras">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<h2>Custom development</h2>
+					<hr class="star-envelope-primary">
+				</div>
+			</div>
+			<div class="row">
+				<div class="col-lg-12 text-center">
+					<p>Let us build your next app or MVP</p>
+					<p>We can generate one-off projects with a quick turnaround</p>
+					<p>Additional support time may be purchased<p> 
+					<p>Contact support for pricing and details</p>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	
+    <!-- Contact Section -->
+    <section id="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <h2>Questions? Comments?</h2>
+                    <hr class="star-envelope-primary">
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+                    <!-- The form should work on most web servers, but if the form is not working you may need to configure your web server differently. -->
+                    <p>
+                        Send us an email at <a href="mailto:support@codenesium.com?Subject=Inquiry" target="_top">support@codenesium.com</a> and we will get back to you.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+        <!-- Footer -->
+        <footer class="text-center">
+            <div class="footer-above">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-col col-md-4">
+                            <h3>You made it so far</h3>
+                            <p><a href="http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feNebula/swagger" onclick="ga('send', 'event', 'ViewDemoFooter', 'click');" target="_blank" class="btn btn-primary btn-lg"><i class="fa fa-fighter-jet" aria-hidden="true"></i>View a demo REST API</a>
+                            <br />
+                            <br />
+                            <a href="https://github.com/codenesium/samples" onclick="ga('send', 'event', 'ViewSourceFooter', 'click');" target="_blank" class="btn btn-primary btn-lg"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i>View samples on Github</a>
+                            </p>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Around the Web</h3>
+                            <ul class="list-inline">
+                                <li>
+                                    <a href="https://github.com/codenesium" target="_blank"  class="btn-social btn-outline"><span class="sr-only">Github</span><i class="fa fa-fw fa-github"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://www.facebook.com/Codenesium" target="_blank"  class="btn-social btn-outline"><span class="sr-only">Facebook</span><i class="fa fa-fw fa-facebook"></i></a>
+                                </li>
+                                <li>
+                                    <a href="https://twitter.com/codenesium" target="_blank"  class="btn-social btn-outline"><span class="sr-only">Twitter</span><i class="fa fa-fw fa-twitter"></i></a>
+                                </li>
+ 
+                            </ul>
+                        </div>
+                        <div class="footer-col col-md-4">
+                            <h3>Support</h3>
+                            <p> <a href="mailto:support@codenesium.com?Subject=Inquiry" target="_top" class="support-email-link">support@codenesium.com</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-below">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            &copy; 2019 Codenesium LLC 
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+        <!-- Scroll to Top Button (Only visible on small and extra-small screen sizes) -->
+        <div class="scroll-top page-scroll hidden-sm hidden-xs hidden-lg hidden-md">
+            <a class="btn btn-primary" href="#page-top">
+                <i class="fa fa-chevron-up"></i>
+            </a>
+        </div>
+
+<!-- jQuery -->
+<script src="vendor/jquery/jquery.min.js"></script>
+<!-- Bootstrap Core JavaScript -->
+<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+<!-- Plugin JavaScript -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<!-- Theme JavaScript -->
+<script src="js/site.js"></script>
+
+ <script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-71359140-1', 'auto');
+  ga('send', 'pageview');
+</script>
+
+
+<script type='text/javascript' data-cfasync='false'>window.purechatApi = { l: [], t: [], on: function () { this.l.push(arguments); } }; (function () { var done = false; var script = document.createElement('script'); script.async = true; script.type = 'text/javascript'; script.src = 'https://app.purechat.com/VisitorWidget/WidgetScript'; document.getElementsByTagName('HEAD').item(0).appendChild(script); script.onreadystatechange = script.onload = function (e) { if (!done && (!this.readyState || this.readyState == 'loaded' || this.readyState == 'complete')) { var w = new PCWidget({c: 'b7faeff1-7b91-45ec-9550-6284ac43564f', f: true }); done = true; } }; })();</script>
+
+<!-- Reddit Conversion Pixel -->
+<script>
+var i=new Image();i.src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=";
+</script>
+<noscript>
+<img height="1" width="1" style="display:none"
+	 src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=" />
+</noscript>
+<!-- DO NOT MODIFY -->
+<!-- End Reddit Conversion Pixel -->
+
+<!-- Global site tag (gtag.js) - Google AdWords: 851792048 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-851792048"></script>
+
+<script>
+function openPureChat()
+{
+purechatApi.set('chatbox.expanded', true);
+return false;
+}
+</script>	
+
+</body>
+</html>

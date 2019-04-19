@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Docker :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+
+<script>
+var i=new Image();i.src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=";
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none"
+		 src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=" />
+</noscript>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-851792048"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-851792048');
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71359140-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<style>
+.nav-select
+{
+	margin-top:15px;
+}
+header:after
+{
+background:none;
+}
+header
+{
+  background-color: #2C3E50;
+}
+
+</style>
+
+<link rel="shortcut icon" href="https://www.codenesium.com/img/favicon.png" type="image/x-icon" />
+
+
+
+    
+  </head>
+  <body data-url="/documentation/codenesium/docker/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://www.codenesium.com/img/favicon.png" alt="alt text" /> <a href="https://www.codenesium.com">Codenesium</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Documentation</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/authentication/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/authentication/">
+            Authentication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/autofac/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/azure/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/azure/">
+            Azure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/docker/" class="dd-item active">
+        <div>
+          <a href="/documentation/codenesium/docker/">
+            Docker
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/entityframework/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/healthchecks/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/healthchecks/">
+            Health Checks
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground Server</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/project-structure/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/project-structure/">Project Structure</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/windowsservice/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/windowsservice/">
+            Running as Windows Service
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/services/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/services/">
+            Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/tooling/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/tooling/">
+            Tooling
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/validation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/validation/">
+            Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/articles/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/articles/">Articles</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/articles/entity-framework-example/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/entity-framework-example/">ASP.NET Core API with Entity Framework</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/articles/chaos-to-solid/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/chaos-to-solid/">Chaos to SOLID</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/account/">Subscription</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Documentation</option> 
+      <option value="/documentation/codenesium/appsettings/" >- AppSettings</option>
+      <option value="/documentation/codenesium/authentication/" >- Authentication</option>
+      <option value="/documentation/codenesium/autofac/" >- Autofac</option>
+      <option value="/documentation/codenesium/azure/" >- Azure</option>
+      <option value="/documentation/codenesium/controllers/" >- Controllers</option>
+      <option value="/documentation/codenesium/databasemigrations/" >- Database Migrations</option>
+      <option value="/documentation/codenesium/deployment/" >- Deployment</option>
+      <option value="/documentation/codenesium/docker/"  selected>- Docker</option>
+      <option value="/documentation/codenesium/entityframework/" >- Entity Framework</option>
+      <option value="/documentation/codenesium/filters/" >- Filters</option>
+      <option value="/documentation/codenesium/healthchecks/" >- Health Checks</option>
+      <option value="/documentation/codenesium/logging/" >- Logging</option>
+      <option value="/documentation/codenesium/performance/" >- Performance</option>
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground Server</option>
+    <option value="/documentation/codenesium/project-structure/" >
+  - 
+   Project Structure</option> 
+  
+      <option value="/documentation/codenesium/repositories/" >- Repositories</option>
+      <option value="/documentation/codenesium/windowsservice/" >- Running as Windows Service</option>
+      <option value="/documentation/codenesium/services/" >- Services</option>
+      <option value="/documentation/codenesium/swagger/" >- Swagger</option>
+      <option value="/documentation/codenesium/testing/" >- Testing</option>
+      <option value="/documentation/codenesium/tooling/" >- Tooling</option>
+      <option value="/documentation/codenesium/validation/" >- Validation</option>
+  
+    <option value="/documentation/articles/" >
+   Articles</option>
+    <option value="/documentation/account/" >
+   Subscription</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Docker</h1>
+    
+    
+    
+    
+
+<p>The files required to run the app in a Docker container are in the solution root directory.</p>
+
+<p>We target Alpine by default to keep the image s small as possible. The default is a self contained app.</p>
+
+<p>For Windows</p>
+
+<ol>
+<li>Install DockerToolbok from <a href="https://docs.docker.com/toolbox/toolbox_install_windows/">https://docs.docker.com/toolbox/toolbox_install_windows/</a></li>
+<li>Run the Docker QuickStart Terminal app from the start menu.</li>
+<li>You may want to stop the default machine in Virtual Box and increase the ram. SQL Server requires 2GB ram and the
+default machine created doesn&rsquo;t have great specs.</li>
+</ol>
+
+<h5 id="running-on-sql-server">Running on SQL Server</h5>
+
+<p>Run DockerWithSQLServer.bat to run with SQL Server.</p>
+
+<p>If you&rsquo;re using Docker Toolbox</p>
+
+<ol>
+<li>The SQL server will be available at <a href="http://192.168.99.100:1433">http://192.168.99.100:1433</a></li>
+<li>The Web app is available at <a href="http://192.168.99.100">http://192.168.99.100</a></li>
+</ol>
+
+<p>To run this example</p>
+
+<pre><code>docker-compose -f docker-compose-sqlserver.yml up
+</code></pre>
+
+<h5 id="running-on-postgres">Running on Postgres</h5>
+
+<p>Run DockerWithPostgres.bat to run with Postgres. This will create a container for Postgres and link it to your .NET Core image.</p>
+
+<p>If you&rsquo;re using Docker Toolbox</p>
+
+<ol>
+<li>The Postgres server will be available at <a href="http://192.168.99.100:5433">http://192.168.99.100:5433</a></li>
+<li>The Web app is available at <a href="http://192.168.99.100">http://192.168.99.100</a></li>
+</ol>
+
+<p>To run this example</p>
+
+<pre><code>docker-compose -f docker-compose-postgres.yml up
+</code></pre>
+
+<h5 id="changing-database-providers">Changing database providers</h5>
+
+<p>Change the DatabaseProvider setting in app settings or via environment arguments to MSSQL or POSTRESQL.</p>
+
+<h5 id="dockerfile">DockerFile</h5>
+
+<pre><code>
+# to run this with docker
+# build a container named ESPIOT with 
+# docker build -t ESPIOT .
+# run with
+# docker run -d -p 8000:8000  --add-host=&quot;localhost:10.0.2.2&quot; --rm --name espiotapp ESPIOT
+# this will run your app exposed on the docker network and will forward port 8000 on the local machine to port 8000 in the container.
+# On this machine it's http://192.168.99.100:8000 but it could be different for you.
+# with the rm option the container will be deleted when it exits
+# running this command will also expose your local network to the docker container so that localhost from
+# inside the container will point to your local machine.
+# see https://stackoverflow.com/questions/30495905/accessing-host-machine-as-localhost-from-a-docker-container-thats-also-inside-a for
+# info about why 10.0.2.2 makes localhost accessible from the container.
+
+
+FROM microsoft/dotnet:2.2-sdk-alpine AS build
+WORKDIR /app
+EXPOSE 80
+
+# copy csproj and restore as distinct layers
+COPY . ./
+
+WORKDIR /app
+RUN dotnet publish ESPIOT.Api.Web/ESPIOT.Api.Web.csproj -c Release  -o /app/out -r alpine-x64 --self-contained
+
+
+FROM microsoft/dotnet:2.2-runtime-deps-alpine AS runtime
+WORKDIR /app
+COPY --from=build /app/out .
+ENTRYPOINT [&quot;./ESPIOT.Api.Web&quot;]
+</code></pre>
+
+<h5 id="docker-compose-sqlserver-yml">docker-compose-sqlserver.yml</h5>
+
+<pre><code>version: '2'
+
+services:
+
+  web:
+    container_name: 'espiot-app'
+    image: 'espiot'
+    build:
+      context: .
+      dockerfile: DockerFile
+    environment:
+       - ASPNETCORE_URLS=http://+:80
+       - ConnectionStrings__ApplicationDbContext=Server=db;Persist Security Info=False;User ID=sa;Password=Passw0rd;Initial Catalog=espiotMultipleActiveResultSets=True;Connection Timeout=10;
+       - DatabaseProvider=MSSQL
+       - MigrateDatabase=true
+    volumes:
+      - .:/var/www/app
+    ports:
+     - &quot;80:80&quot;
+    depends_on:
+     - &quot;db&quot;
+    networks:
+      - espiot-network
+    extra_hosts:
+      - &quot;localhost:10.0.2.2&quot;
+
+  db:
+    image: &quot;microsoft/mssql-server-linux&quot;
+    container_name: 'db'
+    environment:
+       SA_PASSWORD: &quot;Passw0rd&quot;
+       ACCEPT_EULA: &quot;Y&quot;
+    ports:
+      - &quot;1433:1433&quot;
+    networks:
+      - espiot-network
+
+  watchtower:
+    container_name: 'watchtower'
+    image: v2tec/watchtower
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+    networks:
+      - espiot-network
+
+networks:
+    espiot-network:
+       driver: bridge
+</code></pre>
+
+<h5 id="docker-compose-sqlserver-yml-1">docker-compose-sqlserver.yml</h5>
+
+<pre><code>version: '2'
+
+services:
+
+  web:
+    container_name: 'espiot-app'
+    image: 'espiot'
+    build:
+      context: .
+      dockerfile: DockerFile
+    environment:
+       - ASPNETCORE_URLS=http://+:80
+       - ConnectionStrings__ApplicationDbContext=Host=espiot-db;Persist Security Info=False;User ID=postgres;Password=test;Database=espiot;
+       - DatabaseProvider=POSTGRESQL
+       - MigrateDatabase=true
+    volumes:
+      - .:/var/www/app
+    ports:
+     - &quot;80:80&quot;
+    depends_on:
+     - &quot;db&quot;
+    networks:
+      - espiot-network
+
+  db:
+    container_name: 'espiot-db'
+    image: postgres:9.6-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: espiot
+    networks:
+      - espiot-network
+    ports:
+     - &quot;5433:5432&quot;
+    restart: always
+
+  watchtower:
+    container_name: 'watchtower'
+    image: v2tec/watchtower
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+    networks:
+      - espiot-network
+volumes:
+     pgdata:
+
+networks:
+    espiot-network:
+       driver: bridge
+</code></pre>
+
+<h5 id="setup-for-aws-lightsail">Setup for AWS Lightsail</h5>
+
+<pre><code>This setup is for ubuntu,.NET Core and Postgres on AWS LightSail. This will install and run the espiot docker application.
+It will set the docker daemon to run on boot. Your containers should start automatically becuase the docker compose
+file has the containers set to restart always. 
+Watchtower is also set up. Watchtower is a container that polls docker hub for new images and updates your containers sutomatically.
+
+1. Execute from the AWS CLI. You may get errors if you don't execute them one at a time.
+aws lightsail create-instances --instance-name &quot;espiot&quot; --availability-zone &quot;us-east-1b&quot; --blueprint-id &quot;ubuntu_18_04&quot; --bundle-id nano_2_0
+aws lightsail create-disk --disk-name espiot-data --availability-zone &quot;us-east-1b&quot; --size-in-gb 8
+aws lightsail open-instance-public-ports --port-info fromPort=8000,toPort=8000,protocol=TCP --instance-name=&quot;espiot&quot;
+aws lightsail attach-disk --disk-name espiot-data --instance-name espiot --disk-path /dev/xvdf
+aws lightsail allocate-static-ip --static-ip-name &quot;espiot-ip&quot; 
+aws lightsail attach-static-ip --static-ip-name &quot;espiot-ip&quot; --instance-name &quot;espiot&quot;
+aws lightsail get-instance --instance-name &quot;espiot&quot;
+
+2. SSH into the created instance and execute the script below. You can get to the terminal from the LightSail web view.
+This will create a docker-compose.yml file and a setup.sh script that will set up Docker on the machine and
+docker-compose up your container. It will also set up the volume you created earlier so that your database can be persisted.
+You have to presee enter after pasting it to the terminal. 
+
+sudo echo &quot;version: '2'
+services:
+
+  web:
+    container_name: 'espiot-app'
+    image: 'codenesium/espiot'
+    build:
+      context: .
+      dockerfile: DockerFile
+    environment:
+       - ASPNETCORE_URLS=http://+:80
+       - ConnectionStrings__ApplicationDbContext=Host=espiot-db;Persist Security Info=False;User ID=postgres;Password=test;Database=espiot;
+       - DatabaseProvider=POSTGRESQL
+       - MigrateDatabase=true
+    volumes:
+      - .:/var/www/app
+    ports:
+     - &quot;80:80&quot;
+    restart: always
+    depends_on:
+     - &quot;db&quot;
+    networks:
+      - espiot-network
+
+  db:
+    container_name: 'espiot-db'
+    image: postgres:9.6-alpine
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: test
+      POSTGRES_DB: espiot
+    networks:
+      - espiot-network
+    ports:
+     - &quot;5433:5432&quot;
+    restart: always
+    volumes:
+         - /database/espiot:/var/lib/postgresql/data
+  watchtower:
+    container_name: 'watchtower'
+    image: v2tec/watchtower
+    restart: on-failure
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    command: --interval 30
+
+networks:
+    espiot-network:
+       driver: bridge&quot; &gt;&gt; docker-compose.yml;
+   
+sudo echo '#!/bin/bash
+sudo file -s /dev/xvdf &amp;&amp; 
+sudo mkfs -t ext4 /dev/xvdf &amp;&amp; 
+sudo mkdir /database &amp;&amp;
+sudo mkdir /database/espiot &amp;&amp;
+sudo mount /dev/xvdf  /database/espiot &amp;&amp; 
+sudo rmdir /database/espiot/lost+found &amp;&amp; 
+sudo apt-get update &amp;&amp; 
+sudo apt-get install -y docker &amp;&amp; 
+sudo apt-get install -y docker-compose &amp;&amp; 
+sudo service docker start &amp;&amp; 
+sudo systemctl enable docker  &amp;&amp;
+docker pull codenesium/espiot &amp;&amp; 
+sudo docker-compose up;' &gt;&gt; setup.sh;
+
+chmod 755 setup.sh;
+sudo sh ./setup.sh;
+</code></pre>
+
+<h4 id="ngrok">NGROK</h4>
+
+<p>If you want to use ngrok to expose your app publicly uncomment this line</p>
+
+<pre><code>REM &lt;UNCOMMENT TO EXPOSE CONTAINER WITH NGROK&gt; start ngrok http  192.168.99.100:8000
+</code></pre>
+
+<p>Ngrok is a tunnel service that lets you expose your machine from inside a network to the internet.</p>
+
+<p><a href="https://ngrok.com/">https://ngrok.com/</a></p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/codenesium/deployment/" title="Deployment"> <i class="fa fa-chevron-left"></i><label>Deployment</label></a>
+    <a class="nav nav-next" href="/documentation/codenesium/entityframework/" title="Entity Framework" style="margin-right: 0px;"><label>Entity Framework</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="codenesium/docker.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

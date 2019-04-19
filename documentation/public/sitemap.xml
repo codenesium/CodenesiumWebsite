@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  
+  <url>
+    <loc>/documentation/codenesium/appsettings/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/authentication/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/autofac/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/azure/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/controllers/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/databasemigrations/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/deployment/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/docker/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/entityframework/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/filters/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/getting-started/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/healthchecks/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/logging/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/performance/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/playground-server/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/project-structure/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/repositories/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/windowsservice/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/services/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/swagger/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/testing/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/tooling/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/validation/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/codenesium/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/_footer/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/_header/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/articles/entity-framework-example/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/articles/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>/documentation/articles/chaos-to-solid/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/account/</loc>
+  </url>
+  
+  <url>
+    <loc>/documentation/tags/</loc>
+    <priority>0</priority>
+  </url>
+  
+</urlset>

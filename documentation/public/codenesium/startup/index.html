@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Startus.cs :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+
+<script>
+var i=new Image();i.src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=";
+</script>
+<noscript>
+	<img height="1" width="1" style="display:none"
+		 src="https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=" />
+</noscript>
+
+
+
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-851792048"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-851792048');
+</script>
+
+<script>
+(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+ga('create', 'UA-71359140-1', 'auto');
+ga('send', 'pageview');
+
+</script>
+
+<style>
+.nav-select
+{
+	margin-top:15px;
+}
+header:after
+{
+background:none;
+}
+header
+{
+  background-color: #2C3E50;
+}
+
+</style>
+
+<link rel="shortcut icon" href="https://www.codenesium.com/img/favicon.png" type="image/x-icon" />
+
+
+
+    
+  </head>
+  <body data-url="/documentation/codenesium/startup/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://www.codenesium.com/img/favicon.png" alt="alt text" /> <a href="https://www.codenesium.com">Codenesium</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Documentation</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/authentication/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/authentication/">
+            Authentication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/autofac/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/entityframework/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground server</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/project-structure/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/project-structure/">Project Structure</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/services/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/services/">
+            Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/startup/" class="dd-item active">
+        <div>
+          <a href="/documentation/codenesium/startup/">
+            Startus.cs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/application/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/application/">Using the Application</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/validation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/validation/">
+            Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/database-forge/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/database-forge/">Database Forge</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/database-forge/loadingandsaving/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/database-forge/loadingandsaving/">
+            Loading and Saving
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/database-forge/uaingtheforge/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/database-forge/uaingtheforge/">
+            Using the Forge
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/articles/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/articles/">Articles</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/articles/entity-framework-example/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/entity-framework-example/">ASP.NET Core API with Entity Framework</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/articles/chaos-to-solid/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/chaos-to-solid/">Chaos to SOLID</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/articles/multithreading-net-core/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/articles/multithreading-net-core/">Multithreading in .NET Core</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/account/">Subscription</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Documentation</option> 
+      <option value="/documentation/codenesium/appsettings/" >- AppSettings</option>
+      <option value="/documentation/codenesium/authentication/" >- Authentication</option>
+      <option value="/documentation/codenesium/autofac/" >- Autofac</option>
+      <option value="/documentation/codenesium/controllers/" >- Controllers</option>
+      <option value="/documentation/codenesium/databasemigrations/" >- Database Migrations</option>
+      <option value="/documentation/codenesium/deployment/" >- Deployment</option>
+      <option value="/documentation/codenesium/entityframework/" >- Entity Framework</option>
+      <option value="/documentation/codenesium/filters/" >- Filters</option>
+      <option value="/documentation/codenesium/logging/" >- Logging</option>
+      <option value="/documentation/codenesium/performance/" >- Performance</option>
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground server</option>
+    <option value="/documentation/codenesium/project-structure/" >
+  - 
+   Project Structure</option> 
+  
+      <option value="/documentation/codenesium/repositories/" >- Repositories</option>
+      <option value="/documentation/codenesium/services/" >- Services</option>
+      <option value="/documentation/codenesium/startup/"  selected>- Startus.cs</option>
+      <option value="/documentation/codenesium/swagger/" >- Swagger</option>
+      <option value="/documentation/codenesium/testing/" >- Testing</option>
+    <option value="/documentation/codenesium/application/" >
+  - 
+   Using the Application</option> 
+  
+      <option value="/documentation/codenesium/validation/" >- Validation</option>
+    <option value="/documentation/codenesium/database-forge/" >
+  - 
+   Database Forge</option>
+  
+    <option value="/documentation/articles/" >
+   Articles</option>
+    <option value="/documentation/account/" >
+   Subscription</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Startus.cs</h1>
+    
+    
+    
+    <p>TODO add comments all over this monster</p>
+
+<pre><code>using Autofac;
+using Autofac.Extensions.DependencyInjection;
+using Autofac.Features.Metadata;
+using Autofac.Features.ResolveAnything;
+using Codenesium.Foundation.CommonMVC;
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Mvc.Authorization;
+using Microsoft.AspNetCore.Mvc.Versioning;
+using Microsoft.AspNetCore.Mvc.ApiExplorer;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Configuration;
+using Microsoft.Extensions.DependencyInjection;
+using Microsoft.Extensions.Logging;
+using Microsoft.Extensions.Options;
+using Microsoft.IdentityModel.Tokens;
+using Swashbuckle.AspNetCore.Swagger;
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Linq;
+using System.Reflection;
+using System.Text;
+using AdventureWorksNS.Api.Contracts;
+using AdventureWorksNS.Api.Services;
+using AdventureWorksNS.Api.DataAccess;
+
+namespace AdventureWorksNS.Api.Web
+{
+    public class Startup
+    {
+        public Startup(IHostingEnvironment env)
+        {
+            var builder = new ConfigurationBuilder()
+                .SetBasePath(env.ContentRootPath)
+                .AddJsonFile($&quot;appsettings.{env.EnvironmentName}.json&quot;, optional: false, reloadOnChange: true)
+                .AddEnvironmentVariables();
+            this.Configuration = builder.Build();
+        }
+
+        public IContainer ApplicationContainer { get; private set; }
+
+        public IConfigurationRoot Configuration { get; private set; }
+
+        // ConfigureServices is where you register dependencies. This gets
+        // called by the runtime before the Configure method, below.
+        public IServiceProvider ConfigureServices(IServiceCollection services)
+        {
+
+            services.Configure&lt;ServiceSettings&gt;(this.Configuration);
+
+            services.AddMvcCore(config =&gt;
+            {
+                if(this.Configuration.GetValue&lt;bool&gt;(&quot;SecurityEnabled&quot;))
+                {
+                     var policy = new AuthorizationPolicyBuilder()
+                                  .RequireAuthenticatedUser()
+                                  .Build();
+                     config.Filters.Add(new AuthorizeFilter(policy));
+                 }
+                 config.Filters.Add(new BenchmarkAttribute());
+                 config.Filters.Add(new NullModelValidaterAttribute());
+                 
+            }).AddVersionedApiExplorer(
+            o =&gt;
+            {
+                o.GroupNameFormat = &quot;'v'VVV&quot;;
+
+                // note: this option is only necessary when versioning by url segment. the SubstitutionFormat
+                // can also be used to control the format of the API version in route templates
+                o.SubstituteApiVersionInUrl = true;
+            });
+
+            services.AddMvc();
+
+            services.AddApiVersioning(
+             o =&gt;
+             {
+                 // reporting api versions will return the headers &quot;api-supported-versions&quot; and &quot;api-deprecated-versions&quot;
+                 o.ReportApiVersions = true;
+                 o.ApiVersionReader = new HeaderApiVersionReader(&quot;api-version&quot;);
+                 o.AssumeDefaultVersionWhenUnspecified = true;
+                 o.DefaultApiVersion = new Microsoft.AspNetCore.Mvc.ApiVersion(1, 0);
+             });
+
+
+            services.AddSwaggerGen(o =&gt;
+            {
+                o.ResolveConflictingActions(apiDescriptions =&gt; apiDescriptions.First());
+
+                // resolve the IApiVersionDescriptionProvider service
+                // note: that we have to build a temporary service provider here because one has not been created yet
+                var provider = services.BuildServiceProvider().GetRequiredService&lt;IApiVersionDescriptionProvider&gt;();
+
+                // add a swagger document for each discovered API version
+                // note: you might choose to skip or document deprecated API versions differently
+                foreach ( var description in provider.ApiVersionDescriptions )
+                {
+                    o.SwaggerDoc( description.GroupName, CreateInfoForApiVersion( description ) );
+                }
+
+                // add a custom operation filter which sets default values
+                o.OperationFilter&lt;SwaggerDefaultValues&gt;();
+
+                // integrate xml comments
+                // o.IncludeXmlComments( XmlCommentsFilePath );
+                if(this.Configuration.GetValue&lt;bool&gt;(&quot;SecurityEnabled&quot;))
+                {
+                   var security = new Dictionary&lt;string, IEnumerable&lt;string&gt;&gt;
+                   {
+                        {&quot;Bearer&quot;, new string[] { }},
+                   };
+                   o.AddSecurityRequirement(security);
+                   o.AddSecurityDefinition(&quot;Bearer&quot;, new ApiKeyScheme() { In = &quot;header&quot;, Description = &quot;Please insert JWT prefixed with Bearer&quot;, Name = &quot;Authorization&quot;, Type = &quot;apiKey&quot; });
+                }
+            });
+
+
+           services.AddCors(config =&gt;
+           {
+                var policy = new CorsPolicy();
+                policy.Headers.Add(&quot;*&quot;);
+                policy.Methods.Add(&quot;*&quot;);
+                policy.Origins.Add(&quot;*&quot;);
+                policy.SupportsCredentials = true;
+                config.AddPolicy(&quot;policy&quot;, policy);
+            });
+
+            if(this.Configuration.GetValue&lt;bool&gt;(&quot;SecurityEnabled&quot;))
+            {
+                var key = Encoding.UTF8.GetBytes(this.Configuration[&quot;JwtSigningKey&quot;]);
+                services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+                .AddJwtBearer(jwtBearerOptions =&gt;
+                {
+                    jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
+                    {
+                        ClockSkew = TimeSpan.FromMinutes(5),
+                        ValidateAudience = true,
+                        ValidateIssuer = true,
+                        ValidateLifetime = true,
+                        RequireSignedTokens = true,
+                        RequireExpirationTime = true,
+                        ValidAudience = this.Configuration[&quot;JwtAudience&quot;],
+                        ValidIssuer = this.Configuration[&quot;JwtIssuer&quot;],
+                        IssuerSigningKey = new SymmetricSecurityKey(key)
+                    };
+                });
+            }
+
+            // Create the container builder.
+            var builder = new ContainerBuilder();
+
+            // Register dependencies, populate the services from
+            // the collection, and build the container. If you want
+            // to dispose of the container at the end of the app,
+            // be sure to keep a reference to it as a property or field.
+            //
+            // Note that Populate is basically a foreach to add things
+            // into Autofac that are in the collection. If you register
+            // things in Autofac BEFORE Populate then the stuff in the
+            // ServiceCollection can override those things; if you register
+            // AFTER Populate those registrations can override things
+            // in the ServiceCollection. Mix and match as needed.
+            builder.Populate(services);
+
+            builder.Register(ctx =&gt; ctx.Resolve&lt;IOptions&lt;ServiceSettings&gt;&gt;().Value);
+
+            // set up entity framework options
+            DbContextOptionsBuilder options = new DbContextOptionsBuilder();
+            options.UseSqlServer(this.Configuration.GetConnectionString(nameof(ApplicationDbContext)));
+            ApplicationDbContext context = new ApplicationDbContext(options.Options);
+            builder.RegisterInstance(context).As&lt;ApplicationDbContext&gt;();
+            builder.RegisterInstance(context).As&lt;DbContext&gt;();
+
+            // Set up the transaction coordinator for Entity Framework
+            builder.RegisterType&lt;EntityFrameworkTransactionCoordinator&gt;()
+                .As&lt;ITransactionCoordinator&gt;()
+                .InstancePerLifetimeScope();
+
+
+
+
+            var servicesAssembly = typeof(ValidationError).Assembly;
+            builder.RegisterAssemblyTypes(servicesAssembly)
+                .Where(t =&gt; t.IsClass &amp;&amp; !t.IsAbstract &amp;&amp; (t.Name.EndsWith(&quot;Service&quot;) || t.Name.EndsWith(&quot;ModelValidator&quot;) || t.Name.EndsWith(&quot;Mapper&quot;)))
+                .AsImplementedInterfaces()
+                .PropertiesAutowired();
+
+            var dataAccessAssembly = typeof(AbstractRepository).Assembly;
+            builder.RegisterAssemblyTypes(dataAccessAssembly)
+                .Where(t =&gt; t.IsClass &amp;&amp; !t.IsAbstract &amp;&amp; t.Name.EndsWith(&quot;Repository&quot;))
+                .AsImplementedInterfaces();
+
+
+            // Register anything else we might have that isn't a system, Microsoft, Abstract or Generic class
+            builder.RegisterSource(new AnyConcreteTypeNotAlreadyRegisteredSource(
+                t =&gt;
+                    !t.FullName.StartsWith(&quot;System&quot;) &amp;&amp;
+                    !t.FullName.StartsWith(&quot;Microsoft&quot;) &amp;&amp;
+                    !t.IsAbstract &amp;&amp;
+                    !(t.IsGenericType &amp;&amp; t.GetGenericTypeDefinition() == typeof(Meta&lt;&gt;)))
+            );
+
+            this.ApplicationContainer = builder.Build();
+            return new AutofacServiceProvider(this.ApplicationContainer);
+        }
+
+        // Configure is where you add middleware. This is called after
+        // ConfigureServices. You can use IApplicationBuilder.ApplicationServices
+        // here if you need to resolve things from the container.
+        public void Configure(
+          IApplicationBuilder app,
+          ILoggerFactory loggerFactory,
+          IApplicationLifetime appLifetime,
+          ApplicationDbContext context)
+        {
+            loggerFactory.AddConsole(this.Configuration.GetSection(&quot;Logging&quot;));
+            loggerFactory.AddDebug();
+
+            // enable this setting in the config to migrate the database on application startup
+            if (this.Configuration.GetValue&lt;bool&gt;(&quot;MigrateDatabase&quot;))
+            {
+                context.Database.Migrate();
+            }
+
+            if(this.Configuration.GetValue&lt;bool&gt;(&quot;SecurityEnabled&quot;))
+            {
+                 app.UseAuthentication();
+            }
+
+            // Enable middleware to serve generated Swagger as a JSON endpoint.
+            app.UseSwagger();
+
+            // Enable middleware to serve swagger-ui (HTML, JS, CSS, etc.), specifying the Swagger JSON endpoint.
+            app.UseSwaggerUI(c =&gt;
+            {
+                // remove .. from this line to make the swagger endpoint work from a console app
+                // we have this to make it work in IIS with a virtual directory
+                // c.SwaggerEndpoint(&quot;../swagger/v1/swagger.json&quot;, &quot;AdventureWorks&quot;);
+                c.SwaggerEndpoint(&quot;../swagger/v1/swagger.json&quot;, &quot;AdventureWorks&quot;);
+            });
+
+            app.UseMvc();
+
+            app.UseDeveloperExceptionPage();
+
+            // If you want to dispose of resources that have been resolved in the
+            // application container, register for the &quot;ApplicationStopped&quot; event.
+            // You can only do this if you have a direct reference to the container,
+            // so it won't work with the above ConfigureContainer mechanism.
+            appLifetime.ApplicationStopped.Register(() =&gt; this.ApplicationContainer.Dispose());
+        }
+
+        static string XmlCommentsFilePath
+        {
+            get
+            {
+                var basePath = AppContext.BaseDirectory;
+                var fileName = typeof(Startup).GetTypeInfo().Assembly.GetName().Name + &quot;.xml&quot;;
+                return Path.Combine(basePath, fileName);
+            }
+        }
+
+        static Info CreateInfoForApiVersion(ApiVersionDescription description)
+        {
+            var info = new Info()
+            {
+                Title = &quot;AdventureWorks API &quot; + description.ApiVersion,
+                Version = description.ApiVersion.ToString(),
+                Description = &quot;Visit https://generator.swagger.io/ to generate a client for this API&quot;,
+                Contact = new Contact() { Name = &quot;test&quot;, Email = &quot;test@test.com&quot; },
+                TermsOfService = &quot;&quot;,
+                License = new License() { Name = &quot;MIT&quot;, Url = &quot;https://opensource.org/licenses/MIT&quot; }
+            };
+
+            if (description.IsDeprecated)
+            {
+                info.Description += &quot; This API version has been deprecated.&quot;;
+            }
+
+            return info;
+        }
+    }
+}
+</code></pre>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/codenesium/services/" title="Services"> <i class="fa fa-chevron-left"></i><label>Services</label></a>
+    <a class="nav nav-next" href="/documentation/codenesium/swagger/" title="Swagger" style="margin-right: 0px;"><label>Swagger</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="codenesium/startup.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

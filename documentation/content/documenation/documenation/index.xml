@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Codenesium on Codenesium Documentation</title>
+    <link>/documentation/</link>
+    <description>Recent content in Codenesium on Codenesium Documentation</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    
+	<atom:link href="/documentation/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>AppSettings</title>
+      <link>/documentation/codenesium/appsettings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/appsettings/</guid>
+      <description>There are two appSettings.json files that are generated.
+appSettings.Development.json appSettings.Production.json
+By default .NET Core looks at the environment variable ASPNETCORE_ENVIRONMENT to determine what environment it&amp;rsquo;s using.
+If that variable isn&amp;rsquo;t found it will default to production.
+{ &amp;quot;ExternalBaseUrl&amp;quot;: &amp;quot;http://localhost:8000&amp;quot;, -&amp;gt; used to return headers with the correct url when hosted with a proxy &amp;quot;MigrateDatabase&amp;quot;: false, -&amp;gt; migrate the database with entity framework &amp;quot;SecurityEnabled&amp;quot;: false, -&amp;gt; secure all controllers with bearer authentication &amp;quot;JwtSigningKey&amp;quot;: &amp;quot;&amp;quot;, -&amp;gt; used with bearer auth &amp;quot;JwtIssuer&amp;quot;: &amp;quot;&amp;quot;, -&amp;gt; used with bearer auth &amp;quot;JwtAudience&amp;quot;: &amp;quot;&amp;quot;, -&amp;gt; used with bearer auth &amp;quot;ConnectionStrings&amp;quot;: { &amp;quot;ApplicationDbContext&amp;quot;: &amp;quot;&amp;quot; -&amp;gt; connection string for the application }, &amp;quot;Logging&amp;quot;: { &amp;quot;IncludeScopes&amp;quot;: false, &amp;quot;Debug&amp;quot;: { &amp;quot;LogLevel&amp;quot;: { &amp;quot;Default&amp;quot;: &amp;quot;Warning&amp;quot; } }, &amp;quot;Console&amp;quot;: { &amp;quot;LogLevel&amp;quot;: { &amp;quot;Default&amp;quot;: &amp;quot;Warning&amp;quot; } } } }  </description>
+    </item>
+    
+    <item>
+      <title>Authentication</title>
+      <link>/documentation/codenesium/authentication/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/authentication/</guid>
+      <description>.NET Core Authentication MSDN
+The summary of how we do authentication is we use bearer tokens as JWTs.
+Authentication is complicated. There are so many options and ways it can be done. For a generated API we took the easiest and most generic route which is a bearer token. This makes sense for most APIs and web applications.
+You will need a way to generate tokens. This could be a static token you generate with a long expiration time or it could be by using Identity Server</description>
+    </item>
+    
+    <item>
+      <title>Autofac</title>
+      <link>/documentation/codenesium/autofac/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/autofac/</guid>
+      <description>We use Autofac for our Inversion of Control container. ASP.NET Core does have a build in IOC container but we found it had some limitaitons. Mainly it doesn&amp;rsquo;t support registration by convention which means you have to make an explicit registration for everything you add which is a pain. Autofac is only used in the Startup.cs file. Look there for documenation on how we use Autofac.
+Autofac Documentation
+Dependency injection in .</description>
+    </item>
+    
+    <item>
+      <title>Azure</title>
+      <link>/documentation/codenesium/azure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/azure/</guid>
+      <description>It&amp;rsquo;s very easy to deploy an app to Azure.
+You can follow the official documentation with some modification https://docs.microsoft.com/en-us/aspnet/core/tutorials/publish-to-azure-webapp-using-vs?view=aspnetcore-2.2
+You can skip to the publish step.
+The project you are publishing is the one that ends with .Web
+Change the DefaultConnection setting when you set up the SQL Server to be ApplicationDbContext.
+Uncheck the &amp;ldquo;Apply this migrations on publish&amp;rdquo; checkbox. The migrations in a Codenesium app are enabled with the MigrateDatabase flag in the app settings and are enabled by default.</description>
+    </item>
+    
+    <item>
+      <title>Controllers</title>
+      <link>/documentation/codenesium/controllers/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/controllers/</guid>
+      <description>We support the standard REST methods and also generate methods for database constraints and foreign keys. Many to many relationships through a reference table can be set as a reference table in the API settings which will automatically create methods on the two reference tables.
+[HttpGet] [Route(&amp;quot;&amp;quot;)] [ReadOnly] [ProducesResponseType(typeof(List&amp;lt;ApiDeviceResponseModel&amp;gt;), 200)] public async virtual Task&amp;lt;IActionResult&amp;gt; All(int? limit, int? offset) [HttpGet] [Route(&amp;quot;{id}&amp;quot;)] [ReadOnly] [ProducesResponseType(typeof(ApiDeviceResponseModel), 200)] [ProducesResponseType(typeof(void), 404)] public async virtual Task&amp;lt;IActionResult&amp;gt; Get(int id) [HttpPost] [Route(&amp;quot;BulkInsert&amp;quot;)] [UnitOfWork] [ProducesResponseType(typeof(List&amp;lt;ApiDeviceResponseModel&amp;gt;), 200)] [ProducesResponseType(typeof(void), 413)] [ProducesResponseType(typeof(ActionResponse), 422)] public virtual async Task&amp;lt;IActionResult&amp;gt; BulkInsert([FromBody] List&amp;lt;ApiDeviceRequestModel&amp;gt; models) [HttpPost] [Route(&amp;quot;&amp;quot;)] [UnitOfWork] [ProducesResponseType(typeof(ApiDeviceResponseModel), 201)] [ProducesResponseType(typeof(CreateResponse&amp;lt;int&amp;gt;), 422)] public virtual async Task&amp;lt;IActionResult&amp;gt; Create([FromBody] ApiDeviceRequestModel model) [HttpPatch] [Route(&amp;quot;{id}&amp;quot;)] [UnitOfWork] [ProducesResponseType(typeof(ApiDeviceResponseModel), 200)] [ProducesResponseType(typeof(void), 404)] [ProducesResponseType(typeof(ActionResponse), 422)] public virtual async Task&amp;lt;IActionResult&amp;gt; Patch(int id, [FromBody] JsonPatchDocument&amp;lt;ApiDeviceRequestModel&amp;gt; patch) [HttpPut] [Route(&amp;quot;{id}&amp;quot;)] [UnitOfWork] [ProducesResponseType(typeof(ApiDeviceResponseModel), 200)] [ProducesResponseType(typeof(void), 404)] [ProducesResponseType(typeof(ActionResponse), 422)] public virtual async Task&amp;lt;IActionResult&amp;gt; Update(int id, [FromBody] ApiDeviceRequestModel model) [HttpDelete] [Route(&amp;quot;{id}&amp;quot;)] [UnitOfWork] [ProducesResponseType(typeof(void), 204)] [ProducesResponseType(typeof(ActionResponse), 422)] public virtual async Task&amp;lt;IActionResult&amp;gt; Delete(int id) byPublicId is a unique index on table device.</description>
+    </item>
+    
+    <item>
+      <title>Database Migrations</title>
+      <link>/documentation/codenesium/databasemigrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/databasemigrations/</guid>
+      <description>I think database migrations can be one of the most frustrating things to deal with. There are several way to handle migrations. My preferred way is to use migration scripts with Fluent Migrator. I just really like having data and schema scripts in the same script so I can handle any situation. There are lots of options though and you should pick the one that works for you.
+Our generated APIs start with a single entity framework migration in the data access project.</description>
+    </item>
+    
+    <item>
+      <title>Deployment</title>
+      <link>/documentation/codenesium/deployment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/deployment/</guid>
+      <description>Deployment in .NET Core is very easy.
+This article from Microsoft will give you all of the information you need.
+For our applications you can open a command prompt and navigate to the web directory in the solution.
+From there you can run dotnet publish -c release
+The app wil be built and the output will be in bin\release\netcoreapp2.1\publish
+You can also build self contained applications with arguments like these</description>
+    </item>
+    
+    <item>
+      <title>Docker</title>
+      <link>/documentation/codenesium/docker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/docker/</guid>
+      <description>The files required to run the app in a Docker container are in the solution root directory.
+We target Alpine by default to keep the image s small as possible. The default is a self contained app.
+For Windows
+ Install DockerToolbok from https://docs.docker.com/toolbox/toolbox_install_windows/ Run the Docker QuickStart Terminal app from the start menu. You may want to stop the default machine in Virtual Box and increase the ram. SQL Server requires 2GB ram and the default machine created doesn&amp;rsquo;t have great specs.</description>
+    </item>
+    
+    <item>
+      <title>Entity Framework</title>
+      <link>/documentation/codenesium/entityframework/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/entityframework/</guid>
+      <description>Entities Every table in your database that you want to be exposed to Entity Framework needs a class for it.
+AbstractEntityFrameworkPOCO is an empty abstract class that can be used to add fields to every table in the database like TenantId.
+namespace AdventureWorksNS.Api.DataAccess { [Table(&amp;quot;ContactType&amp;quot;, Schema=&amp;quot;Person&amp;quot;)] public partial class ContactType: AbstractEntityFrameworkPOCO { public ContactType() {} public void SetProperties( int contactTypeID, DateTime modifiedDate, string name) { this.ContactTypeID = contactTypeID.ToInt(); this.ModifiedDate = modifiedDate.</description>
+    </item>
+    
+    <item>
+      <title>Filters</title>
+      <link>/documentation/codenesium/filters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/filters/</guid>
+      <description>Filters in ASP.NET Core are useful for making changes in the request pipeline. The ReadOnlyAttribute for example can be applied to controller methods that should only be reading data. It disables the change tracking on the controller.
+Filters can be used to make changes to requests or apply security rules. Basically anything that needs to happen before the request enters the controller or the response after it leave.
+Filters can also be applied to controllers.</description>
+    </item>
+    
+    <item>
+      <title>Health Checks</title>
+      <link>/documentation/codenesium/healthchecks/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/healthchecks/</guid>
+      <description>Generated APIs have a health check endpoint that by default checks that the database is accessible and that we can query it.
+The path is api/health.
+Helath checks are enabled in startup.cs.</description>
+    </item>
+    
+    <item>
+      <title>Logging</title>
+      <link>/documentation/codenesium/logging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/logging/</guid>
+      <description>MSDN
+There are two places to configure logging. This section is only used by Entity Framework and is set by default to write the Entity Framework SQL queries to the console.
+public static readonly LoggerFactory LoggerFactory = new LoggerFactory(new List&amp;lt;ILoggerProvider&amp;gt;() { new ConsoleLoggerProvider((category, level) =&amp;gt; category == DbLoggerCategory.Database.Command.Name &amp;amp;&amp;amp; level == LogLevel.Information, true), new DebugLoggerProvider((category, level) =&amp;gt; category == DbLoggerCategory.Database.Command.Name &amp;amp;&amp;amp; level == LogLevel.Information) });  The second place sets up the logging from the config file.</description>
+    </item>
+    
+    <item>
+      <title>Performance</title>
+      <link>/documentation/codenesium/performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/performance/</guid>
+      <description>With our architecture it&amp;rsquo;s easy to achieve &amp;gt; 5000 requests per second with 10 year old hardware.
+This test was ran from localhost on the server. It returns a single address record. Comparable performance was found running from another machine. The server was CPU bound by dotnet.exe while running this example.
+Windows Server 2012 SQL Server 2014 8GB ram. 12 Cores CPU X5650 @ 2.67GHz AdventureWorks2012 database from https://github.com/Microsoft/sql-server-samples/releases/tag/adventureworks Tested with bombardier from https://github.</description>
+    </item>
+    
+    <item>
+      <title>Repositories</title>
+      <link>/documentation/codenesium/repositories/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/repositories/</guid>
+      <description>Our repositories look like a standard repository.
+We do generate a separate repository for each object. This is a violation of DRY. However, a generic repository can be an anti-pattern and I like the flexibility of a repository per object.
+Some design choices I made.
+ We don&amp;rsquo;t expose a method that takes a Func like you will see on a lot of repositories using Entity Framework. I made this choice because I don&amp;rsquo;t want the repository to be so coupled to Entity Framework is can never be changed.</description>
+    </item>
+    
+    <item>
+      <title>Running as Windows Service</title>
+      <link>/documentation/codenesium/windowsservice/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/windowsservice/</guid>
+      <description>Every generated project has the required code to run as a windows service.
+In Program.cs remove the line CreateWebHostBuilderForServiceIDE(args).Build().Run();
+Uncomment the commented out code.
+Make sure you&amp;rsquo;re targeting windows in the csproj.
+When running in the IDE the project will run from the console like normal. With this code uncommented when running from the command line the default is to be a windows service. You can still run the executable as a console app by passing &amp;ndash;console on the command line.</description>
+    </item>
+    
+    <item>
+      <title>Services</title>
+      <link>/documentation/codenesium/services/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/services/</guid>
+      <description>Services are where the business logic lives.
+They take models from the Web layer and validate then call repositories to make changes to your database.
+The default generated APID doesn&amp;rsquo;t contain business logic for your domain. It only has what the database can tell us.
+If your models require other logic then this is where that is implemented. It can be in validators or in methods in the service it&amp;rsquo;s really up to you.</description>
+    </item>
+    
+    <item>
+      <title>Swagger</title>
+      <link>/documentation/codenesium/swagger/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/swagger/</guid>
+      <description>We use SwashBuckle to provide swagger support.
+There is a lot of configuration options available for swagger.
+Look in Startup.cs to see everything Swagger related.
+For a demo view http://www.codenesium.com:8080/user7303b0f5161f4149bf2959a488d359feNebula/swagger/
+To generate a client for a swagger endpoint in many languages see http://editor.swagger.io/
+services.AddSwaggerGen(o =&amp;gt; { o.ResolveConflictingActions(apiDescriptions =&amp;gt; apiDescriptions.First()); // resolve the IApiVersionDescriptionProvider service // note: that we have to build a temporary service provider here because one has not been created yet var provider = services.</description>
+    </item>
+    
+    <item>
+      <title>Testing</title>
+      <link>/documentation/codenesium/testing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/testing/</guid>
+      <description>Codenesium ships with a unit/integration test suite. Our philosophy is that tests are key to making software than can evolve with changing requirements.
+All projects have 80%+ coverage. Where the coverage is missing is by design.
+We use popular libraries for testing. Testing with this stack is fun!
+xUnit This is unit testing framework.
+Moq Mocking library for testing.
+Fluent Assertions Assertion library that allows checking of assertions with fluent syntax.</description>
+    </item>
+    
+    <item>
+      <title>Tooling</title>
+      <link>/documentation/codenesium/tooling/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/tooling/</guid>
+      <description>Codenesium has tooling to help with your development process.
+Generated files that are expected to not be modified and generated over are named with a .g.cs extension.
+Generated files that are meant to be modified have a .cs extension.
+All generated files have a hash appended to the source code
+/*&amp;lt;Codenesium&amp;gt; &amp;lt;Hash&amp;gt;a3b4672d5db2dbc17932846fa4116b4c&amp;lt;/Hash&amp;gt; &amp;lt;/Codenesium&amp;gt;*/  This hash is a MD5 hash of the contents of the file. If you modify the file in any way the hash will be invalid.</description>
+    </item>
+    
+    <item>
+      <title>Validation</title>
+      <link>/documentation/codenesium/validation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/codenesium/validation/</guid>
+      <description>We use Fluent Validation for our validation needs.
+Fluent Validation is an amazing validation library that makes validation fun.
+Rules are assigned to models using fluent syntax.
+This is a complex example but I want to show how flexible it is and how clear the rules are.
+public virtual void AddressLine1Rules() { this.RuleFor(x =&amp;gt; x.AddressLine1).NotNull(); this.RuleFor(x =&amp;gt; x).MustAsync(this.BeUniqueGetAddressLine1AddressLine2CityStateProvinceIDPostalCode).When(x =&amp;gt; x ?.AddressLine1 != null).WithMessage(&amp;quot;Violates unique constraint&amp;quot;).WithName(nameof(ApiAddressRequestModel.AddressLine1)); this.RuleFor(x =&amp;gt; x.AddressLine1).Length(0, 60); } private async Task&amp;lt;bool&amp;gt; BeUniqueGetAddressLine1AddressLine2CityStateProvinceIDPostalCode(ApiAddressRequestModel model, CancellationToken cancellationToken) { var record = await this.</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/documentation/_footer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/_footer/</guid>
+      <description>See a mistake? Email us at support@codenesium.com</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/documentation/_header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/_header/</guid>
+      <description>Codenesium</description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>/documentation/documenation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/documentation/documenation/</guid>
+      <description>Codenesium DocumentationCodenesium :: Codenesium Documentationvar baseurl = &#34;\/documentation&#34;;var i=new Image();i.src=&#34;https://alb.reddit.com/t.gif?q=CAAHAAABAAoACQAAAAACbiNWAA==&amp;s=kaLZRyF0BEqBfro3pLVnd01-R0k5I7C8ba0hXD7Tsbc=&#34;;window.dataLayer = window.dataLayer || [];function gtag(){dataLayer.push(arguments);}gtag(&#39;js&#39;, new Date());gtag(&#39;config&#39;, &#39;AW-851792048&#39;);(function(i,s,o,g,r,a,m){i[&#39;GoogleAnalyticsObject&#39;]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)})(window,document,&#39;script&#39;,&#39;https://www.google-analytics.com/analytics.js&#39;,&#39;ga&#39;);ga(&#39;create&#39;, &#39;UA-71359140-1&#39;, &#39;auto&#39;);ga(&#39;send&#39;, &#39;pageview&#39;);.nav-select{margin-top:15px;}header:after{background:none;}header{background-color: #2C3E50;}Codenesium
+&amp;#9776;Getting startedDocumentationAppSettingsAuthenticationAutofacAzureControllersDatabase MigrationsDeploymentDockerEntity FrameworkFiltersHealth ChecksLoggingPerformancePlayground ServerProject StructureRepositoriesRunning as Windows ServiceServicesSwaggerTestingToolingValidationArticlesASP.</description>
+    </item>
+    
+  </channel>
+</rss>

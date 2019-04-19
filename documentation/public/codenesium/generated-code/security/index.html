@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Security :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/documentation/codenesium/generated-code/security/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <a class="baselink" href="/documentation">Codenesium Documentation</a>
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+    <nav class="shortcuts">
+            <li class="" role="">
+                <a href="https://www.codenesium.com"  rel="noopener">
+                  <label>Home</label>
+                </a>
+            </li>
+    </nav>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Codenesium</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/codenesium/application/" class="dd-item alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/application/">Application</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/codenesium/application/client-overview/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/application/client-overview/">Client overview</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/application/loadingdatabase/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/application/loadingdatabase/">
+            Load from database
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/codenesium/generated-code/" class="dd-item parent alwaysopen haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/generated-code/">Generated Code</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/generated-code/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/autofac/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/businessobjects/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/businessobjects/">
+            Business Objects
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/entityframework/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/fluentvalidation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/fluentvalidation/">
+            Fluent Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/modelvalidators/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/modelvalidators/">
+            Model Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/projectstructure/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/projectstructure/">
+            Project Structure
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/security/" class="dd-item active">
+        <div>
+          <a href="/documentation/codenesium/generated-code/security/">
+            Security
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/startup/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/startup/">
+            Startus.cs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground server</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/playground-server/building/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/playground-server/building/">
+            Building
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/database-forge/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/database-forge/">Database Forge</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/database-forge/loadingandsaving/" class="dd-item">
+        <div>
+          <a href="/documentation/database-forge/loadingandsaving/">
+            Loading and Saving
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/database-forge/uaingtheforge/" class="dd-item">
+        <div>
+          <a href="/documentation/database-forge/uaingtheforge/">
+            Using the Forge
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/account/">Account</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/account/login/" class="dd-item">
+        <div>
+          <a href="/documentation/account/login/">
+            Login
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/account/register/" class="dd-item">
+        <div>
+          <a href="/documentation/account/register/">
+            Register
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/account/subscription/" class="dd-item">
+        <div>
+          <a href="/documentation/account/subscription/">
+            Subscription
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Codenesium</option> 
+    <option value="/documentation/codenesium/application/" >
+  - 
+   Application</option> 
+    <option value="/documentation/codenesium/application/client-overview/" >
+  -- 
+   Client overview</option> 
+  
+      <option value="/documentation/codenesium/application/loadingdatabase/" >-- Load from database</option>
+  
+    <option value="/documentation/codenesium/generated-code/" >
+  - 
+   Generated Code</option> 
+      <option value="/documentation/codenesium/generated-code/appsettings/" >-- AppSettings</option>
+      <option value="/documentation/codenesium/generated-code/autofac/" >-- Autofac</option>
+      <option value="/documentation/codenesium/generated-code/businessobjects/" >-- Business Objects</option>
+      <option value="/documentation/codenesium/generated-code/controllers/" >-- Controllers</option>
+      <option value="/documentation/codenesium/generated-code/databasemigrations/" >-- Database Migrations</option>
+      <option value="/documentation/codenesium/generated-code/deployment/" >-- Deployment</option>
+      <option value="/documentation/codenesium/generated-code/entityframework/" >-- Entity Framework</option>
+      <option value="/documentation/codenesium/generated-code/filters/" >-- Filters</option>
+      <option value="/documentation/codenesium/generated-code/fluentvalidation/" >-- Fluent Validation</option>
+      <option value="/documentation/codenesium/generated-code/logging/" >-- Logging</option>
+      <option value="/documentation/codenesium/generated-code/modelvalidators/" >-- Model Validation</option>
+      <option value="/documentation/codenesium/generated-code/performance/" >-- Performance</option>
+      <option value="/documentation/codenesium/generated-code/projectstructure/" >-- Project Structure</option>
+      <option value="/documentation/codenesium/generated-code/repositories/" >-- Repositories</option>
+      <option value="/documentation/codenesium/generated-code/security/"  selected>-- Security</option>
+      <option value="/documentation/codenesium/generated-code/startup/" >-- Startus.cs</option>
+      <option value="/documentation/codenesium/generated-code/swagger/" >-- Swagger</option>
+      <option value="/documentation/codenesium/generated-code/testing/" >-- Testing</option>
+  
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground server</option>
+  
+    <option value="/documentation/database-forge/" >
+   Database Forge</option>
+    <option value="/documentation/account/" >
+   Account</option>
+
+
+
+        </select>
+      </center>
+    </div>
+      <div>
+        <div class="searchbox">
+          <input data-search-input id="search-by" type="text" placeholder="Search...">
+        </div>
+        <script type="text/javascript" src="/documentation/js/lunr.min.js"></script>
+        <script type="text/javascript" src="/documentation/js/auto-complete.js"></script>
+        <link href="/documentation/css/auto-complete.css" rel="stylesheet">
+        <script type="text/javascript">
+          
+              var baseurl = "\/documentation";
+          
+        </script>
+        <script type="text/javascript" src="/documentation/js/search.js"></script>
+      </div>
+    
+
+    <h1>Security</h1>
+    
+    
+    
+    <p>TODO</p>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/codenesium/generated-code/repositories/" title="Repositories"> <i class="fa fa-chevron-left"></i><label>Repositories</label></a>
+    <a class="nav nav-next" href="/documentation/codenesium/generated-code/startup/" title="Startus.cs" style="margin-right: 0px;"><label>Startus.cs</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    <div class="github-link">
+      <a href="codenesium/generated-code/security.md" target="blank"><i class="fa fa-code-fork"></i>
+        Improve this page</a>
+    </div>
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>

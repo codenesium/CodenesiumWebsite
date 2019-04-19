@@ -1,0 +1,633 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Codenesium Documentation</title>
+    
+      <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta name="generator" content="Hugo 0.40.3" />
+<title>Entity Framework :: Codenesium Documentation</title>
+<link rel="shortcut icon" href="/documentation/images/favicon.png" type="image/x-icon" />
+<link href="/documentation/css/font-awesome.min.css" rel="stylesheet">
+<link href="/documentation/css/nucleus.css" rel="stylesheet">
+<link href="/documentation/theme-flex/style.css" rel="stylesheet">
+
+<link rel="stylesheet" href="/documentation/css/bootstrap.min.css">
+<script src="/documentation/js/jquery-2.x.min.js"></script>
+<script type="text/javascript">
+      var baseurl = "\/documentation";
+</script>
+<meta name="description" content="">
+
+
+
+    
+  </head>
+  <body data-url="/documentation/codenesium/generated-code/entityframework/">
+    
+      <header>
+  <div class="logo">
+    
+	
+  
+    <p><img src="https://www.codenesium.com/img/favicon.png" alt="alt text" /> <a href="https://www.codenesium.com">Codenesium</a></p>
+
+  
+
+  </div>
+  <div class="burger"><a href="javascript:void(0);" style="font-size:15px;">&#9776;</a></div>
+</header>
+<article>
+  <aside>
+    <ul class="menu">
+          <li data-nav-id="/documentation/" class="dd-item">
+          <a href="/documentation/">
+            <i class="fa fa-fw fa-home"></i>
+          </a>
+          </li>
+    <li data-nav-id="/documentation/getting-started/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/getting-started/">Getting started</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/">Codenesium</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+    <li data-nav-id="/documentation/codenesium/generated-code/" class="dd-item parent haschildren
+        ">
+      <div>
+      <a href="/documentation/codenesium/generated-code/">Generated Code</a>
+            <i class="fa fa-angle-down fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/codenesium/generated-code/appsettings/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/appsettings/">
+            AppSettings
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/authentication/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/authentication/">
+            Authentication
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/autofac/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/autofac/">
+            Autofac
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/controllers/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/controllers/">
+            Controllers
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/databasemigrations/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/databasemigrations/">
+            Database Migrations
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/deployment/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/deployment/">
+            Deployment
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/entityframework/" class="dd-item active">
+        <div>
+          <a href="/documentation/codenesium/generated-code/entityframework/">
+            Entity Framework
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/filters/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/filters/">
+            Filters
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/logging/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/logging/">
+            Logging
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/performance/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/performance/">
+            Performance
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/generated-code/project-structure/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/generated-code/project-structure/">Project Structure</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/repositories/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/repositories/">
+            Repositories
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/services/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/services/">
+            Services
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/startup/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/startup/">
+            Startus.cs
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/swagger/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/swagger/">
+            Swagger
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/testing/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/testing/">
+            Testing
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/codenesium/generated-code/validation/" class="dd-item">
+        <div>
+          <a href="/documentation/codenesium/generated-code/validation/">
+            Validation
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/codenesium/playground-server/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/codenesium/playground-server/">Playground server</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+    <li data-nav-id="/documentation/codenesium/application/" class="dd-item alwaysopen
+        ">
+      <div>
+      <a href="/documentation/codenesium/application/">Using the Application</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/database-forge/" class="dd-item haschildren
+        ">
+      <div>
+      <a href="/documentation/database-forge/">Database Forge</a><i class="fa fa-angle-right fa-lg category-icon"></i><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+        <ul>
+      <li data-nav-id="/documentation/database-forge/loadingandsaving/" class="dd-item">
+        <div>
+          <a href="/documentation/database-forge/loadingandsaving/">
+            Loading and Saving
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+      <li data-nav-id="/documentation/database-forge/uaingtheforge/" class="dd-item">
+        <div>
+          <a href="/documentation/database-forge/uaingtheforge/">
+            Using the Forge
+          </a><i class="fa fa-circle-thin read-icon"></i>
+        </div>
+    </li>
+        </ul>
+    </li>
+    <li data-nav-id="/documentation/account/" class="dd-item
+        ">
+      <div>
+      <a href="/documentation/account/">Subscription</a><i class="fa fa-circle-thin read-icon"></i>
+      </div>
+    </li>
+
+
+
+
+    </ul>
+    <section>
+    </section>
+  </aside>
+  <section class="page">
+    
+    <div class="nav-select">
+      <center>Navigation : 
+        <select onchange="javascript:location.href = this.value;">
+          
+    <option value="/documentation/getting-started/" >
+   Getting started</option> 
+  
+    <option value="/documentation/codenesium/" >
+   Codenesium</option> 
+    <option value="/documentation/codenesium/generated-code/" >
+  - 
+   Generated Code</option> 
+      <option value="/documentation/codenesium/generated-code/appsettings/" >-- AppSettings</option>
+      <option value="/documentation/codenesium/generated-code/authentication/" >-- Authentication</option>
+      <option value="/documentation/codenesium/generated-code/autofac/" >-- Autofac</option>
+      <option value="/documentation/codenesium/generated-code/controllers/" >-- Controllers</option>
+      <option value="/documentation/codenesium/generated-code/databasemigrations/" >-- Database Migrations</option>
+      <option value="/documentation/codenesium/generated-code/deployment/" >-- Deployment</option>
+      <option value="/documentation/codenesium/generated-code/entityframework/"  selected>-- Entity Framework</option>
+      <option value="/documentation/codenesium/generated-code/filters/" >-- Filters</option>
+      <option value="/documentation/codenesium/generated-code/logging/" >-- Logging</option>
+      <option value="/documentation/codenesium/generated-code/performance/" >-- Performance</option>
+    <option value="/documentation/codenesium/generated-code/project-structure/" >
+  -- 
+   Project Structure</option> 
+  
+      <option value="/documentation/codenesium/generated-code/repositories/" >-- Repositories</option>
+      <option value="/documentation/codenesium/generated-code/services/" >-- Services</option>
+      <option value="/documentation/codenesium/generated-code/startup/" >-- Startus.cs</option>
+      <option value="/documentation/codenesium/generated-code/swagger/" >-- Swagger</option>
+      <option value="/documentation/codenesium/generated-code/testing/" >-- Testing</option>
+      <option value="/documentation/codenesium/generated-code/validation/" >-- Validation</option>
+  
+    <option value="/documentation/codenesium/playground-server/" >
+  - 
+   Playground server</option>
+    <option value="/documentation/codenesium/application/" >
+  - 
+   Using the Application</option> 
+  
+  
+    <option value="/documentation/database-forge/" >
+   Database Forge</option>
+    <option value="/documentation/account/" >
+   Subscription</option>
+
+
+
+        </select>
+      </center>
+    </div>
+    
+
+    <h1>Entity Framework</h1>
+    
+    
+    
+    
+
+<h4 id="entities">Entities</h4>
+
+<p>Every table in your database that you want to be exposed to Entity Framework needs a class for it.</p>
+
+<p>AbstractEntityFrameworkPOCO is an empty abstract class that can be used to add fields to every table in the database like TenantId.</p>
+
+<pre><code>namespace AdventureWorksNS.Api.DataAccess
+{
+    [Table(&quot;ContactType&quot;, Schema=&quot;Person&quot;)]
+    public partial class ContactType: AbstractEntityFrameworkPOCO
+    {
+        public ContactType()
+        {}
+
+        public void SetProperties(
+            int contactTypeID,
+            DateTime modifiedDate,
+            string name)
+        {
+            this.ContactTypeID = contactTypeID.ToInt();
+            this.ModifiedDate = modifiedDate.ToDateTime();
+            this.Name = name;
+        }
+
+        [Key]
+        [Column(&quot;ContactTypeID&quot;, TypeName=&quot;int&quot;)]
+        public int ContactTypeID { get; set; }
+
+        [Column(&quot;ModifiedDate&quot;, TypeName=&quot;datetime&quot;)]
+        public DateTime ModifiedDate { get; set; }
+
+        [Column(&quot;Name&quot;, TypeName=&quot;nvarchar(50)&quot;)]
+        public string Name { get; set; }
+    }
+}
+</code></pre>
+
+<h4 id="transaction-isolation-levels">Transaction Isolation Levels</h4>
+
+<p>TODO</p>
+
+<h4 id="related-entities">Related Entities</h4>
+
+<p>For performance reasons we don&rsquo;t load related entities.</p>
+
+<p>You can add this by using .Include on the EF query.</p>
+
+<pre><code>private List&lt;Customer&gt; SearchLinqEF(Expression&lt;Func&lt;Customer, bool&gt;&gt; predicate, int skip = 0, int take = int.MaxValue, string orderClause = &quot;&quot;)
+{
+    if (string.IsNullOrWhiteSpace(orderClause))
+    {
+        orderClause = $&quot;{nameof(Customer.CustomerID)} ASC&quot;;
+    }
+    return this.Context.Set&lt;Customer&gt;().Where(predicate).AsQueryable().OrderBy(orderClause).Skip(skip).Take(take).ToList&lt;Customer&gt;();
+}
+</code></pre>
+
+<pre><code>return this.Context.Set&lt;Customer&gt;().Where(predicate).AsQueryable().OrderBy(orderClause).Skip(skip).Take(take).ToList&lt;Customer&gt;();
+</code></pre>
+
+<p>Changes to</p>
+
+<pre><code>return this.Context.Set&lt;Customer&gt;().Include(st =&gt; st.SalesTerritory.Name).Where(predicate).AsQueryable().OrderBy(orderClause).Skip(skip).Take(take).ToList&lt;Customer&gt;();
+</code></pre>
+
+<p>Then you have to modify your POCO and the object mapper to map this field to your POCO.</p>
+
+<p>Related entities generates crazy SQL and I don&rsquo;t recommend using it.</p>
+
+<h4 id="unit-of-work">Unit of Work</h4>
+
+<p>Unit of work is accomplished by passing a transaction manager to all controllers and starting a transaction in the request pipeline and then rolling it back if there are errors or committing if there are none.</p>
+
+<pre><code>public class EntityFrameworkTransactionCoordinator : ITransactionCoordinator
+{
+    private DbContext context;
+
+    public EntityFrameworkTransactionCoordinator(DbContext context)
+    {
+        this.context = context;
+    }
+
+    public void BeginTransaction()
+    {
+        this.context.Database.BeginTransaction();
+    }
+
+    public void CommitTransaction()
+    {
+        if (this.context.Database.CurrentTransaction != null)
+        {
+            this.context.Database.CommitTransaction();
+        }
+    }
+
+    public void DisableChangeTracking()
+    {
+        this.context.ChangeTracker.AutoDetectChangesEnabled = false;
+    }
+
+    public void EnableChangeTracking()
+    {
+        this.context.ChangeTracker.AutoDetectChangesEnabled = true;
+    }
+
+    public void RollbackTransaction()
+    {
+        if (this.context.Database.CurrentTransaction != null)
+        {
+            this.context.Database.RollbackTransaction();
+        }
+    }
+}
+</code></pre>
+
+<p>Then in the filter that is applied to any methods you want unit of work applied to</p>
+
+<pre><code>public class UnitOfWorkAttribute : ActionFilterAttribute
+{
+    public override void OnActionExecuting(ActionExecutingContext actionContext)
+    {
+        if(!(actionContext.Controller is AbstractApiController))
+        {
+            throw new Exception(&quot;UnitOfWorkActionFilter can only be applied to controllers that inherit from AbstractApiController&quot;);
+        }
+
+        AbstractApiController controller = (AbstractApiController)actionContext.Controller;
+        controller.TransactionCooordinator.BeginTransaction();
+        
+    }
+
+    public override void OnActionExecuted(ActionExecutedContext actionExecutedContext)
+    {
+        AbstractApiController controller = (AbstractApiController)actionExecutedContext.Controller;
+
+        if (actionExecutedContext.Exception == null)
+        {
+            try
+            {
+                controller.TransactionCooordinator.CommitTransaction();
+            }
+            catch (DbUpdateConcurrencyException)
+            {
+                throw;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+        else
+        {
+            try
+            {
+                controller.TransactionCooordinator.RollbackTransaction();
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+        }
+
+        base.OnActionExecuted(actionExecutedContext);
+    }
+}
+</code></pre>
+
+<h4 id="concurrency">Concurrency</h4>
+
+<p>Concurrency is accomplished by applying an attribute to your Entity Framework POCO called ConcurrencyCheck. This attribute can be applied to multiple columns.</p>
+
+<pre><code>[Column(&quot;ModifiedDate&quot;, TypeName=&quot;datetime&quot;)]
+[ConcurrencyCheck]
+public DateTime ModifiedDate { get; set; }
+</code></pre>
+
+<p>Typically you would use a column called rowversion which is usually a timestamp column. When you retrieve data the column is sent along with the data to the client.
+When the client makes an update the value is sent and if it has changed in the database since the retrieve then Entity Framework will throw a DbUpdateConcurrencyException exception. You can catch this exception in a filter and return something to the client to tell them to retry or to reload the data.</p>
+
+<p>In the UnitOfWorkActionFilter we throw the exception by default. If you need retry functionality you will have to implement it</p>
+
+<pre><code>public override void OnActionExecuted(ActionExecutedContext actionExecutedContext)
+{
+    AbstractApiController controller = (AbstractApiController)actionExecutedContext.Controller;
+
+    if (actionExecutedContext.Exception == null)
+    {
+        try
+        {
+            controller.TransactionCooordinator.CommitTransaction();
+        }
+        catch (DbUpdateConcurrencyException)
+        {
+            throw;
+        }
+        catch (Exception)
+        {
+            throw;
+        }
+    }
+</code></pre>
+
+<h4 id="read-only-requests">Read only requests</h4>
+
+<p>The ReadOnlyAttribute can be applied to any controller methods that only return data. This disables change tracking on the Entity Framework context which
+drastically increases performance.</p>
+
+<pre><code>public class ReadOnlyAttribute : ActionFilterAttribute
+{
+    public override void OnActionExecuting(ActionExecutingContext actionContext)
+    {
+        if(!(actionContext.Controller is AbstractApiController))
+        {
+            throw new Exception(&quot;ReadOnlyFilter can only be applied to controllers that inherit from AbstractApiController&quot;);
+        }
+
+        AbstractApiController controller = (AbstractApiController)actionContext.Controller;
+        controller.TransactionCooordinator.DisableChangeTracking();
+    }
+
+    public override void OnActionExecuted(ActionExecutedContext actionExecutedContext)
+    {
+        base.OnActionExecuted(actionExecutedContext);
+    }
+}
+</code></pre>
+
+<h4 id="dynamic-linq">Dynamic Linq</h4>
+
+<p>For convenience we include repository methods for dynamic linq. This lets you build a string based where clause.
+We do not recommend using this but we realize that there are cases where this could be useful especially when building a search endpoint.
+To improve quality always use nameof around fields.</p>
+
+<pre><code>private List&lt;Customer&gt; SearchLinqEFDynamic(string predicate, int skip = 0, int take = int.MaxValue, string orderClause = &quot;&quot;)
+{
+    if (string.IsNullOrWhiteSpace(orderClause))
+    {
+        orderClause = $&quot;{nameof(Customer.CustomerID)} ASC&quot;;
+    }
+
+    return this.Context.Set&lt;Customer&gt;().Where(predicate).AsQueryable().OrderBy(orderClause).Skip(skip).Take(take).ToList&lt;Customer&gt;();
+}
+</code></pre>
+
+<h4 id="spatial-types">Spatial types</h4>
+
+<p>We do not currently support spatial types. Entity Framework doesn&rsquo;t support them and we set them to do not generate. When support
+is added to Entity Framework we will supoprt them.</p>
+
+<h4 id="rowguid-and-rowversion">Rowguid and Rowversion</h4>
+
+<p>TODO</p>
+
+<h4 id="primary-keys">Primary Keys</h4>
+
+<p>We recommend unique, single field, integer primary keys. There is some contention on this issue but the reasons to design this way outweigh the negatives.</p>
+
+<ol>
+<li>Storage cost is lower because primary keys are stored in any indexes and foreign keys.</li>
+<li>Joins with composite keys are nasty.</li>
+<li>Auto increment is built in.</li>
+<li>An integer is guaranteed unique. A natural key often starts off unique but this can cause problems later when you realize SSN isn&rsquo;t really unique.</li>
+<li>To make sure your table really is a relation a composite unique index can accomplish your uniqueness. Changing this index later is cheap.
+Changing a primary key after the fact stinks.</li>
+<li>A single field primary key makes a lot of sense for a REST API. A composite key doesn&rsquo;t. Get(field1,field2,field3,field4)</li>
+<li>They are developer friendly.</li>
+<li>An alternative is a guid while using NEWSEQUENTIALID(). As a developer I hate dealing with guids in a database. If you need to be able to merge databases
+later you can add a field to all of the tables called rowguid which is designed for this. Guids eat lots of disk space as primary keys.</li>
+</ol>
+
+<h4 id="performance-hints">Performance hints</h4>
+
+<ol>
+<li>Turn off change tracking for read-only requests.</li>
+<li>Don&rsquo;t select more data than you need.</li>
+<li>Beware using included columns.</li>
+<li>Only return the columns you need. We don&rsquo;t do this by default and I think this is a premature optimization.</li>
+<li>Keep the number of records in the context small by not reading a lot of records.</li>
+</ol>
+
+
+    
+    
+        <div class="chevrons">
+    <div id="navigation">
+<a class="nav nav-prev" href="/documentation/codenesium/generated-code/deployment/" title="Deployment"> <i class="fa fa-chevron-left"></i><label>Deployment</label></a>
+    <a class="nav nav-next" href="/documentation/codenesium/generated-code/filters/" title="Filters" style="margin-right: 0px;"><label>Filters</label><i class="fa fa-chevron-right"></i></a></div>
+  </div>
+
+  </section>
+</article>
+
+<footer>
+
+<div class="footline">
+    
+
+    
+
+  
+
+    
+  </div>
+
+
+	<div>
+
+
+  
+    <p>See a mistake? Email us at support@codenesium.com</p>
+
+  
+
+
+
+	</div>
+</footer>
+
+<script src="/documentation/js/clipboard.min.js"></script>
+
+<link href="/documentation/css/featherlight.min.css" rel="stylesheet">
+<script src="/documentation/js/featherlight.min.js"></script>
+
+
+
+<script src="/documentation/theme-flex/script.js"></script>
+
+    
+
+    
+    
+
+    
+  </body>
+</html>
