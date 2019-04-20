@@ -1,1 +1,1 @@
-﻿![alt text](https://www.codenesium.com/img/favicon.png "") [Codenesium](https://www.codenesium.com)
+﻿![alt text](https: [Codenesium](https://www.codenesium.com)
