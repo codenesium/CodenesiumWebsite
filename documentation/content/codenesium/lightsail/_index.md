@@ -6,7 +6,7 @@ alwaysopen = true
 +++
 The Codenesium application has built in tooling for deployment to AWS Lightsail.
 
-Lightsail is a very low cost VPS services. [AWS Lightsail](https://aws.amazon.com/lightsail)
+[AWS Lightsail](https://aws.amazon.com/lightsail) is a very low cost VPS services. 
 
 We support creating Lightsail instances and also deployment of a Codenesium application to Lightsail.
 
@@ -21,7 +21,7 @@ Next you need to configure your AWS Credentials
 
 You can create API credentials from [AWS Security Credentials] (https://console.aws.amazon.com/iam/home?#/security_credentials)
 
-The keyfile in this screen is a file you must download from [AWS Lightsail](https://lightsail.aws.amazon.com/ls/webapp/account/keys)
+The keyfile in this screen is a file you must download from [AWS Lightsail Security Credentials](https://lightsail.aws.amazon.com/ls/webapp/account/keys)
 
 This keyfile will allow us to SSH into your instance and manage the instance.
  

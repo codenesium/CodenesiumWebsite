@@ -236,7 +236,6 @@ aws lightsail get-instance --instance-name "espiot"
 This will create a docker-compose.yml file and a setup.sh script that will set up Docker on the machine and
 docker-compose up your container. It will also set up the volume you created earlier so that your database can be persisted.
 
-``` 
 sudo file -s /dev/xvdf && 
 sudo mkfs -t ext4 /dev/xvdf && 
 sudo mkdir /database &&
