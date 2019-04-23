@@ -41,9 +41,7 @@ namespace AdventureWorksNS.Api.DataAccess
 ```
 
 #### Related Entities
-For performance reasons we don't load related entities.
-
-You can add this by using .Include on the EF query.
+You can include related entities by using .Include on the EF query.
 
 ```
 return this.Context.Set<Customer>().Where(predicate).AsQueryable().OrderBy(orderClause).Skip(skip).Take(take).ToList<Customer>();
@@ -54,8 +52,6 @@ return this.Context.Set<Customer>().Include(st => st.SalesTerritory.Name).Where(
 ```
 
 Then you have to modify your POCO and the object mapper to map this field to your POCO. 
-
-Related entities generates crazy SQL and I don't recommend using it.
 
 #### Unit of Work
 Unit of work is accomplished by passing a transaction manager to all controllers and starting a transaction in the request pipeline and then rolling it back if there are errors or committing if there are none.

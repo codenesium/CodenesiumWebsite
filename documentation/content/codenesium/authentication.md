@@ -13,33 +13,82 @@ The summary of how we do authentication is we use bearer tokens as JWTs.
 Authentication is complicated. There are so many options and ways it can be done. For a generated API we took the easiest and most generic route which is
 a bearer token. This makes sense for most APIs and web applications. 
 
-You will need a way to generate tokens. This could be a static token you generate with a long expiration time or it could be by using [Identity Server](http://docs.identityserver.io/en/release/)
+The generated APIs contain a simple auth solution for users to register and manage their accounts. You don't have to use this solution.
+
+You mau want to look at [Identity Server](http://docs.identityserver.io/en/release/) for your suth solution.
 
 
-Security can be enabled/disabled by setting the SecurityEnabled setting in appSettings.json.
 
 In ConfigureServices we add the authorize attribute to all controllers
 ```
 services.AddMvcCore(config =>
 {
-	if(this.Configuration.GetValue<bool>("SecurityEnabled"))
-	{
-		 var policy = new AuthorizationPolicyBuilder()
-					  .RequireAuthenticatedUser()
-					  .Build();
-		 config.Filters.Add(new AuthorizeFilter(policy));
-	 }
+	 var policy = new AuthorizationPolicyBuilder()
+				.RequireAuthenticatedUser()
+				.AddAuthenticationSchemes(JwtBearerDefaults.AuthenticationScheme)
+				.Build();
+
+	 // add a policy requiring a an authenticated user to hit any controller
+	 config.Filters.Add(new AuthorizeFilter(policy));
+
+	 // add a total request time item to the response header collection
 	 config.Filters.Add(new BenchmarkAttribute());
+
+	 // reject requests with a null model
 	 config.Filters.Add(new NullModelValidaterAttribute());
-	 
+}).AddVersionedApiExplorer(
+o =>
+{
+	o.GroupNameFormat = "'v'VVV";
+
+	// note: this option is only necessary when versioning by url segment. the SubstitutionFormat
+	// can also be used to control the format of the API version in route templates
+	o.SubstituteApiVersionInUrl = true;
 });
 ```
 
-Then we configure the bearer token auth
-```if(this.Configuration.GetValue<bool>("SecurityEnabled"))
+Then we configure Identity and bearer token auth
+```
+ public virtual void SetupAuthentication(IServiceCollection services)
 {
-	var key = Encoding.UTF8.GetBytes(this.Configuration["JwtSigningKey"]);
-	services.AddAuthentication(JwtBearerDefaults.AuthenticationScheme)
+	byte[] key = Encoding.UTF8.GetBytes(this.Configuration["JwtSettings:SigningKey"]);
+	if (key.Length <= 16)
+	{
+		throw new Exception("JWT key mut be longer than 16 characters");
+	}
+
+	services.AddIdentity<AuthUser, IdentityRole>()
+		.AddEntityFrameworkStores<ApplicationDbContext>()
+		.AddDefaultTokenProviders();
+
+	services.Configure<IdentityOptions>(options =>
+	{
+		// Password settings.
+		options.Password.RequiredLength = 8;
+
+		// options.Password.RequireDigit = true;
+		// options.Password.RequireLowercase = true;
+		// options.Password.RequireNonAlphanumeric = true;
+		// options.Password.RequireUppercase = true;
+		// options.Password.RequiredUniqueChars = 1;
+
+		// Lockout settings.
+		// options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+		// options.Lockout.MaxFailedAccessAttempts = 5;
+		// options.Lockout.AllowedForNewUsers = true;
+		// options.SignIn.RequireConfirmedEmail = true;
+
+		// User settings.
+		options.User.AllowedUserNameCharacters =
+		"abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789-._@+";
+		options.User.RequireUniqueEmail = true;
+	});
+
+	services.AddAuthentication(cfg =>
+	{
+		cfg.DefaultScheme = IdentityConstants.ApplicationScheme;
+		cfg.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+	})
 	.AddJwtBearer(jwtBearerOptions =>
 	{
 		jwtBearerOptions.TokenValidationParameters = new TokenValidationParameters()
@@ -50,19 +99,11 @@ Then we configure the bearer token auth
 			ValidateLifetime = true,
 			RequireSignedTokens = true,
 			RequireExpirationTime = true,
-			ValidAudience = this.Configuration["JwtAudience"],
-			ValidIssuer = this.Configuration["JwtIssuer"],
+			ValidAudience = this.Configuration["JwtSettings:Audience"],
+			ValidIssuer = this.Configuration["JwtSettings:Issuer"],
 			IssuerSigningKey = new SymmetricSecurityKey(key)
 		};
 	});
-}
-```
-
-Then in Configure we enable authentication.
-```
-if(this.Configuration.GetValue<bool>("SecurityEnabled"))
-{
-	 app.UseAuthentication();
 }
 ```
 
