@@ -35,19 +35,19 @@ From this screen you can create new machines and deploy.
 
 When we create a new machine we take several steps.
 
-1. Create a new Lightsail instances
+1. Create a new Lightsail instance
 2. Create a static IP
-3. Assign the statis IP to the instances
+3. Assign the static IP to the instance
 4. Create a disk
-5. Assign the disk to the instances
-6. Open firewall ports on the instances
+5. Assign the disk to the instance
+6. Open firewall ports on the instance
 7. SSH into the instance and format and attach the disk
 8. SSH into the instance and install and configure Docker
 
 When we deploy we package your source directory and transfer it to the instance where we unzip, build and then bring your app up with Docker.
 
 
-Now when you regenerate you can auto deploy to your Lightsail instance
+Now when you regenerate you can auto deploy to your Lightsail instance.
 
 ![alt text](images/lightsail-project-screen.png "")
 
